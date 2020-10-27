@@ -5,7 +5,7 @@ from django.db import models
 class MainSlider(models.Model):
     #the model presents the main slider
     
-    slide_number = models.IntegerField(min_value=1)
+    slide_number = models.IntegerField()
     picture_1920_1080 = models.ImageField(upload_to='images/slider')
     picture_1024_768 = models.ImageField(upload_to='images/slider')
     picture_1280_1024 = models.ImageField(upload_to='images/slider')
