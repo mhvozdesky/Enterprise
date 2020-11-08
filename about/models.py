@@ -31,6 +31,7 @@ class News(models.Model):
     title = models.CharField(max_length=200)
     text = models.TextField()
     publication_date = models.DateField(default=datetime.date.today)
+    picture_563_266 = models.ImageField(upload_to='images/news_and_promotion', default=r'images\news1.jpg')    
     
     class Meta:
         verbose_name_plural = "News"    
@@ -41,6 +42,7 @@ class Promotion(models.Model):
     title = models.CharField(max_length=200)
     text = models.TextField()
     publication_date = models.DateField(default=datetime.date.today)
+    picture_563_266 = models.ImageField(upload_to='images/news_and_promotion', default=r'images\news1.jpg')
     
     class Meta:
         verbose_name_plural = "Promotion"      
