@@ -34,7 +34,8 @@ class News(models.Model):
     picture_563_266 = models.ImageField(upload_to='images/news_and_promotion', default=r'images\news1.jpg')    
     
     class Meta:
-        verbose_name_plural = "News"    
+        verbose_name_plural = "News"
+        ordering = ['-publication_date']
 
 class Promotion(models.Model):
     #the model presents Automobiles
@@ -45,4 +46,5 @@ class Promotion(models.Model):
     picture_563_266 = models.ImageField(upload_to='images/news_and_promotion', default=r'images\news1.jpg')
     
     class Meta:
-        verbose_name_plural = "Promotion"      
+        verbose_name_plural = "Promotion"  
+        ordering = ['-publication_date']
