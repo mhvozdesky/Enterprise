@@ -35,7 +35,7 @@ class News(models.Model):
     
     class Meta:
         verbose_name_plural = "News"
-        ordering = ['-publication_date']
+        ordering = ['publication_date']
 
 class Promotion(models.Model):
     #the model presents Automobiles
@@ -47,4 +47,4 @@ class Promotion(models.Model):
     
     class Meta:
         verbose_name_plural = "Promotion"  
-        ordering = ['-publication_date']
+        ordering = ['publication_date']
