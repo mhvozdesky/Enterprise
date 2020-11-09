@@ -43,15 +43,14 @@
 		<div class="slider">
 		    <div class="slider__wrapper">
 		      <div class="slider__items">
+		      {% for slide in list_slides %}
 		        <div class="slider__item">
-		          <div class="background-image background_section_1 slide_1 w1920_h1080" style="background-image: url('{% static 'site_images/camry_1920_1080.jpg' %}');"></div>
-		          <div class="background-image background_section_1 slide_1 w1024_h768" style="background-image: url('{% static 'site_images/camry_1024_768.jpg' %}');"></div>
-		          <div class="background-image background_section_1 slide_1 w1280_h1024" style="background-image: url('{% static 'site_images/camry_1280_1024.jpg' %}');"></div>
-		          <div class="background-image background_section_1 slide_1 w2560_h1080" style="background-image: url('{% static 'site_images/camry_2560_1080.jpg' %}');"></div>
+		          <div class="background-image background_section_1 slide_1 w1920_h1080" style="background-image: url('{{ slide.picture_1920_1080.url }}');"></div>
+		          <div class="background-image background_section_1 slide_1 w1024_h768" style="background-image: url('{{ slide.picture_1024_768.url }}');"></div>
+		          <div class="background-image background_section_1 slide_1 w1280_h1024" style="background-image: url('{{ slide.picture_1280_1024.url }}');"></div>
+		          <div class="background-image background_section_1 slide_1 w2560_h1080" style="background-image: url('{{ slide.picture_2560_1080.url }}');"></div>
 		        </div>
-		        <div class="slider__item">
-		         <div class="background-image" style="background-image: url('{% static 'site_images/1600х900_Toyota_Service_1_tcm-3046-1797152.jpg' %}');"></div>
-		        </div>
+		      {% endfor%}
 		      </div>
 		    </div>
 		</div>
@@ -64,87 +63,21 @@
 		</div>
 		<div class="model-range">
 			<div class="wrapper" style="grid-template-columns: repeat(4, 1fr);">
-			   <div class="auto-item">
-			   		<a href="#">
-				   		<div class="auto-img" style='background-image: url("{% static "site_images/renderSpecificVehicle (9).png" %}");'></div>
-				   		<div class="auto-name"><strong>MODEL1</strong> <span class="hybrid">+гібрид</span></div>
-				   		<div class="auto-price">Ціна <span class="price">від 729 000</span> грн</div>
-				   		<div class="auto-line"><hr></div>
-				   		<div class="auto-detail">Детальніше</div>
-				   	</a>
-			   </div>
-			   <div class="auto-item">
-			   		<a href="#">
-				   		<div class="auto-img" style='background-image: url("{% static "site_images/renderSpecificVehicle (10).png" %}");'></div>
-				   		<div class="auto-name"><strong>MODEL2</strong> <span class="hybrid">+гібрид</span></div>
-				   		<div class="auto-price">Ціна <span class="price">від 729 000</span> грн</div>
-				   		<div class="auto-line"><hr></div>
-				   		<div class="auto-detail">Детальніше</div>
-				   	</a>
-			   </div>
-			   <div class="auto-item">
-			   		<a href="#">
-				   		<div class="auto-img" style='background-image: url("{% static "site_images/renderSpecificVehicle (12).png" %}");'></div>
-				   		<div class="auto-name"><strong>MODEL3</strong> <span class="hybrid">+гібрид</span></div>
-				   		<div class="auto-price">Ціна <span class="price">від 729 000</span> грн</div>
-				   		<div class="auto-line"><hr></div>
-				   		<div class="auto-detail">Детальніше</div>
-				   	</a>
-			   </div>
-			   <div class="auto-item">
-			   		<a href="#">
-				   		<div class="auto-img" style='background-image: url("{% static "site_images/renderSpecificVehicle (1).png" %}");'></div>
-				   		<div class="auto-name"><strong>MODEL4</strong> <span class="hybrid">+гібрид</span></div>
-				   		<div class="auto-price">Ціна <span class="price">від 729 000</span> грн</div>
-				   		<div class="auto-line"><hr></div>
-				   		<div class="auto-detail">Детальніше</div>
-				   	</a>
-			   </div>
-			   <div class="auto-item">
-			   		<a href="#">
-				   		<div class="auto-img" style='background-image: url("{% static "site_images/renderSpecificVehicle.png" %}");'></div>
-				   		<div class="auto-name"><strong>MODEL5</strong> <span class="hybrid">+гібрид</span></div>
-				   		<div class="auto-price">Ціна <span class="price">від 729 000</span> грн</div>
-				   		<div class="auto-line"><hr></div>
-				   		<div class="auto-detail">Детальніше</div>
-				   	</a>
-			   </div>
-			   <div class="auto-item">
-			   		<a href="#">
-				   		<div class="auto-img" style='background-image: url("{% static "site_images/renderSpecificVehicle (2).png" %}");'></div>
-				   		<div class="auto-name"><strong>MODEL6</strong> <span class="hybrid">+гібрид</span></div>
-				   		<div class="auto-price">Ціна <span class="price">від 729 000</span> грн</div>
-				   		<div class="auto-line"><hr></div>
-				   		<div class="auto-detail">Детальніше</div>
-				   	</a>
-			   </div>
-			   <div class="auto-item">
-			   		<a href="#">
-				   		<div class="auto-img" style='background-image: url("{% static "site_images/renderSpecificVehicle (3).png" %}");'></div>
-				   		<div class="auto-name"><strong>MODEL7</strong> <span class="hybrid">+гібрид</span></div>
-				   		<div class="auto-price">Ціна <span class="price">від 729 000</span> грн</div>
-				   		<div class="auto-line"><hr></div>
-				   		<div class="auto-detail">Детальніше</div>
-				   	</a>
-			   </div>
-			   <div class="auto-item">
-			   		<a href="#">
-				   		<div class="auto-img" style='background-image: url("{% static "site_images/renderSpecificVehicle (4).png" %}");'></div>
-				   		<div class="auto-name"><strong>MODEL8</strong> <span class="hybrid">+гібрид</span></div>
-				   		<div class="auto-price">Ціна <span class="price">від 729 000</span> грн</div>
-				   		<div class="auto-line"><hr></div>
-				   		<div class="auto-detail">Детальніше</div>
-				   	</a>
-			   </div>
-			   <div class="auto-item">
-			   		<a href="#">
-				   		<div class="auto-img" style='background-image: url("{% static "site_images/renderSpecificVehicle (5).png" %}");'></div>
-				   		<div class="auto-name"><strong>MODEL9</strong> <span class="hybrid">+гібрид</span></div>
-				   		<div class="auto-price">Ціна <span class="price">від 729 000</span> грн</div>
-				   		<div class="auto-line"><hr></div>
-				   		<div class="auto-detail">Детальніше</div>
-				   	</a>
-			   </div>
+			   	{% for automobile in list_automobiles %}
+			   	   <div class="auto-item">
+				   		<a href="#">
+					   		<div class="auto-img" style='background-image: url("{{ automobile.picture_770_340.url }}");'></div>
+					   		<div class="auto-name"><strong>{{ automobile.title }}</strong> 
+						   		{% if automobile.availability_hybrid %}
+						   			<span class="hybrid">+гібрид</span>
+						   		{% endif %}
+					   		</div>
+					   		<div class="auto-price">Ціна <span class="price">від {{ automobile.price_starts|floatformat:2 }}</span> грн</div>
+					   		<div class="auto-line"><hr></div>
+					   		<div class="auto-detail">Детальніше</div>
+					   	</a>
+			   		</div>
+			   {% endfor %} 
 			</div>
 		</div>
 	</section>

@@ -20,7 +20,7 @@ class Automobiles(models.Model):
     title = models.CharField(max_length=200)
     picture_770_340 = models.ImageField(upload_to='images/automobiles')
     availability_hybrid = models.BooleanField(default=False)
-    price_starts = models.FloatField()
+    price_starts = models.CharField(max_length=20)
     
     class Meta:
         verbose_name_plural = "Automobiles"    
