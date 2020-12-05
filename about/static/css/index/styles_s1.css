@@ -101,7 +101,7 @@ section {
 }
 
 .tel-sales {
-	background-image: url("../трубка.png");
+	/*background-image: url("../трубка.png");*/
 	background-repeat: no-repeat;
 	background-position: left center;
 	padding-left: 20%; 
@@ -160,7 +160,7 @@ a, a:active {
 	width: 55px;
 	min-width: 55px;
 	max-width: 55px;
-	background-image: url("../toyota-logo-1989-2560x1440-1024x560 (1).png");
+	/*background-image: url("../toyota-logo-1989-2560x1440-1024x560 (1).png");*/
 	background-size: 10vh; 
 	background-position: center center; 
 	background-repeat:no-repeat;
@@ -522,14 +522,14 @@ a, a:active {
 }
 
 .item-tel {
-	background-image: url("../phone.png");
+	/*background-image: url("../phone.png");*/
 	background-repeat: no-repeat;
 	background-size: 7%;
 	background-position: left center;
 }
 
 .item-mail {
-	background-image: url("../mail.png");
+	/*background-image: url("../mail.png");*/
 	background-repeat: no-repeat;
 	background-size: 7%;
 	background-position: left center;

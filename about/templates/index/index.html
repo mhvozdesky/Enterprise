@@ -7,6 +7,23 @@
 	<title>Enterprise | Your new car</title>
 	<link rel="stylesheet" href="{% static 'css\index\styles_s1.css' %}">
 	<link rel="stylesheet" href="{% static 'css\index\slider.css' %}">
+	<style type="text/css">
+		.tel-sales {
+			background-image: url("{% static 'site_images\трубка.png' %}");
+		}
+
+		.log-nav {
+			background-image: url("{% static 'site_images\toyota-logo-1989-2560x1440-1024x560 (1).png' %}");
+		}
+
+		.item-tel {
+			background-image: url("{% static 'site_images\phone.png' %}");
+		}
+
+		.item-mail {
+			background-image: url("{% static 'site_images\mail.png' %}");
+		}
+	</style>
 </head>
 <body>
 		<header class="header">
@@ -119,7 +136,8 @@
 		<div class="content-block">
 			<div class="news-block">
 				<img src="{{ last_news.picture_563_266.url }}" class="img-news news-contern">
-				<div class="news-contern" ><h5>{{ last_news.title }}</h5> <span class="text-news">{{last_news.text}}</span></div>
+				{# <div class="news-contern" ><h5>{{ last_news.title }}</h5> <span class="text-news">{{last_news.content}}</span></div> #}
+				<div class="news-contern" ><h5>{{ last_news.title }}</h5> {{last_news.content|safe}}</div>
 				<div class="more-text"><a href='#'>Читати далі</a></div>
 			</div>
 			<div class="promotion-block">

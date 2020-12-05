@@ -1,5 +1,6 @@
 import datetime
 from django.db import models
+from ckeditor.fields import RichTextField
 
 
 class MainSlider(models.Model):
@@ -31,7 +32,8 @@ class News(models.Model):
     title = models.CharField(max_length=200)
     text = models.TextField()
     publication_date = models.DateField(default=datetime.date.today)
-    picture_563_266 = models.ImageField(upload_to='images/news_and_promotion', default=r'images\news1.jpg')    
+    picture_563_266 = models.ImageField(upload_to='images/news_and_promotion', default=r'images\news1.jpg') 
+    content = RichTextField(null=True)
     
     class Meta:
         verbose_name_plural = "News"
