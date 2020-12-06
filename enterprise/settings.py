@@ -127,3 +127,33 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # The absolute path to the directory where collectstatic will collect static files for deployment.
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 CKEDITOR_UPLOAD_PATH = "uploads/"
+
+CKEDITOR_CONFIGS = { 
+    'default': { 
+        'toolbar': 'Custom', 
+        'toolbar_Custom': [ 
+            [ 'Styles', 'Format', 'Font', 'FontSize' ],
+            [ 'Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript', '-', 'CopyFormatting', 'RemoveFormat' ],
+            [ 'Source', '-', 'NewPage', 'ExportPdf', 'Preview', '-', 'Templates' ],
+            [ 'Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo' ],
+            [ 'Find', 'Replace', '-', 'SelectAll', '-', 'Scayt' ],
+            [ 'Form', 'Checkbox', 'Radio', 'TextField', 'Textarea', 'Select', 'Button', 'ImageButton', 'HiddenField' ],
+            [ 'NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote', 'CreateDiv', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock', '-', 'BidiLtr', 'BidiRtl', 'Language' ],
+            [ 'Link', 'Unlink', 'Anchor' ],
+            [ 'Image', 'Flash', 'Table', 'HorizontalRule', 'Smiley', 'SpecialChar', 'PageBreak', 'Iframe' ],
+            [ 'TextColor', 'BGColor' ],
+            [ 'Maximize', 'ShowBlocks' ],
+            [ 'About' ]
+        ] 
+    } 
+}
+
+#CKEDITOR_CONFIGS = { 
+    #'default': { 
+        #'toolbar': 'Custom', 
+        #'toolbar_Custom': [ 
+            #[ 'Source', '-', 'Save', 'NewPage', 'ExportPdf', 'Preview', 'Print', '-', 'Templates' ],
+
+        #] 
+    #} 
+#}
