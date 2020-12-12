@@ -30,7 +30,7 @@ class News(models.Model):
     #the model presents News
     
     title = models.CharField(max_length=54)
-    short_description = RichTextField(default='', max_length=138)
+    short_description = models.CharField(default='', max_length=138)
     publication_date = models.DateField(default=datetime.date.today)
     picture_563_266 = models.ImageField('picture 563x266', upload_to='images/news_and_promotion', default=r'images\news1.jpg') 
     text = RichTextField(default='')
@@ -43,7 +43,7 @@ class Promotion(models.Model):
     #the model presents Automobiles
     
     title = models.CharField(max_length=54)
-    short_description = RichTextField(default='', max_length=138)
+    short_description = models.CharField(default='', max_length=138)
     publication_date = models.DateField(default=datetime.date.today)
     picture_563_266 = models.ImageField('picture 563x266', upload_to='images/news_and_promotion', default=r'images\news1.jpg')
     text = RichTextField(default='')
