@@ -132,15 +132,15 @@ CKEDITOR_CONFIGS = {
     'default': { 
         'toolbar': 'Custom', 
         'toolbar_Custom': [ 
-            [ 'Styles', 'Format', 'Font', 'FontSize' ],
+            [ 'Styles', 'Format'],
             [ 'Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript', '-', 'CopyFormatting', 'RemoveFormat' ],
-            [ 'Source', '-', 'NewPage', 'ExportPdf', 'Preview', '-', 'Templates' ],
-            [ 'Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo' ],
-            [ 'Find', 'Replace', '-', 'SelectAll', '-', 'Scayt' ],
+            [ 'Source', '-', 'ExportPdf', 'Preview', '-', 'Templates' ],
+            [ 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo' ],
+            [ 'Find', 'Replace', '-', 'Scayt' ],
             [ 'Form', 'Checkbox', 'Radio', 'TextField', 'Textarea', 'Select', 'Button', 'ImageButton', 'HiddenField' ],
             [ 'NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote', 'CreateDiv', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock', '-', 'BidiLtr', 'BidiRtl', 'Language' ],
             [ 'Link', 'Unlink', 'Anchor' ],
-            [ 'Image', 'Flash', 'Table', 'HorizontalRule', 'Smiley', 'SpecialChar', 'PageBreak', 'Iframe' ],
+            [ 'Image', 'Table', 'HorizontalRule', 'Smiley', 'SpecialChar', 'PageBreak', 'Iframe' ],
             [ 'TextColor', 'BGColor' ],
             [ 'Maximize', 'ShowBlocks' ],
             [ 'About' ]
