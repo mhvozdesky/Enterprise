@@ -167,7 +167,13 @@ section {
 	position: relative;
 	top: 40%;
 	background-color: hsl(0 0% 100% / 0.6);
-	width: 200%
+	width: 200%;
+	opacity: 0;
+	-webkit-transition: opacity .25s ease .1s;
+	-moz-transition: opacity .25s ease .1s;
+	-o-transition: opacity .25s ease .1s;
+	-ms-transition: opacity .25s ease .1s;
+	transition: opacity .25s ease .1s;
 }
 
 .ul-lang {
@@ -175,6 +181,10 @@ section {
 	color: black;
 	padding: 0px;
 }
+
+.wrapper-lang:hover > .list-langs {
+	opacity: 1;
+} 
 
 /*.active-lang:after {
 	width: 0;
