@@ -146,6 +146,98 @@ section {
 	width: 13%;
 }
 
+/*.wrapper-img-lang {
+	height: 100%;
+	width: 100%;
+}*/
+
+.wrapper-lang {
+	color: black;
+	margin-left: 10%;
+	display: inline-block;
+	height: 100%;
+}
+
+.active-lang {
+	position: relative;
+	top: 25%;
+}
+
+.list-langs {
+	position: relative;
+	top: 40%;
+	background-color: hsl(0 0% 100% / 0.6);
+	width: 200%
+}
+
+.ul-lang {
+	list-style-type: none;
+	color: black;
+	padding: 0px;
+}
+
+/*.active-lang:after {
+	width: 0;
+	height: 0px;
+	border: 10px solid transparent;
+	border-bottom: none;
+	border-top-color: black;
+	content: '';
+	vertical-align: middle;
+	display: inline-block;
+	position: relative;
+	right: -20px;
+}*/
+
+/*.list-langs {
+	list-style-type: none;
+	color: black;
+}
+*/
+/*.lang-nav{
+	width: 35%;
+	height: 100%;
+	overflow: hidden;
+	position: relative;
+	left: 20%;
+	transition: top 1.25s ease 1.1s;
+	transition: height .25s ease .1s;
+
+}*/
+
+/*.language-selection-container {
+	position: relative;
+	top: 20%;
+	width: 70%;
+	height: 70%;
+	opacity: 1;
+	-webkit-transition: opacity .25s ease .1s;
+	-moz-transition: opacity .25s ease .1s;
+	-o-transition: opacity .25s ease .1s;
+	-ms-transition: opacity .25s ease .1s;
+	transition: opacity .25s ease .1s;
+}*/
+
+/*.lang-nav:hover {
+	top: 125%;
+	background-color: #1f2024;
+	position: relative;
+	height: 352.37%;
+	
+}
+
+.lang-nav:hover > .wrapper-img-lang-ua {
+	height: 20%;
+	width: 70%;
+	position: relative;
+	top: 5%;
+}
+
+.lang-nav:hover > .language-selection-container {
+	opacity: 1;
+}*/
+
+
 a, a:active {
 	text-decoration: none;
 	color: black;
@@ -157,11 +249,11 @@ a, a:active {
 }
 
 .log-nav {
-	width: 55px;
-	min-width: 55px;
-	max-width: 55px;
+	width: 3%;
+	min-width: 3%;
+	max-width: 3%;
 	/*background-image: url("../toyota-logo-1989-2560x1440-1024x560 (1).png");*/
-	background-size: 10vh; 
+	background-size: 170%; 
 	background-position: center center; 
 	background-repeat:no-repeat;
 }

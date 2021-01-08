@@ -23,6 +23,54 @@
 		.item-mail {
 			background-image: url("{% static 'site_images\mail.png' %}");
 		}
+
+		/*.wrapper-img-lang-ua {
+			background-image: url("{% static 'general\img\uk-ua.jpg' %}");
+			background-size: cover;
+			background-position: center center;
+			height: 60%;
+			width: 60%;
+			position: relative;
+			top: 20%;
+		}*/
+
+		/*.ua-lang {
+			background-image: url("{% static 'general\img\uk-ua.jpg' %}");
+			width: 100%;
+			height: 30%;
+			margin-top: 7%;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}
+
+		.ru-lang {
+			background-image: url("{% static 'general\img\ru-ru.jpg' %}");
+			width: 100%;
+			height: 30%;
+			margin-top: 7%;
+			background-repeat: no-repeat;
+			background-size: cover;
+		}*/
+
+		/*@media (max-aspect-ratio: 5/4) {
+			.wrapper-img-lang-ua {
+				width: 85%;
+			}
+
+			.language-selection-container {
+				width: 3%;
+			} 
+		}*/
+
+		/*@media (min-aspect-ratio: 5/4) and (max-aspect-ratio: 16/9) {
+			.wrapper-img-lang-ua {
+				width: 85%;
+			}
+
+			.language-selection-container {
+				width: 3%;
+			} 
+		}*/
 	</style>
 </head>
 <body>
@@ -44,6 +92,27 @@
 						<li class="nav_item"><a href="#">Запчастини</a></li>
 						<li class="nav_item"><a href="#">Про нас</a></li>
 						<li class="nav_item log-nav"></li>
+						<li class="nav_item lang-nav">
+							<!--<div class="lang-nav">
+								<div class="wrapper-img-lang-ua"></div>
+								<div class="language-selection-container">
+									<div class="ua-lang"></div>
+									<div class="ru-lang"></div>
+								</div>
+							</div>-->
+							<!--<ul class="list-langs">
+								<li class="lang-ua">UK</li>
+								<li class="lang-ru">RU</li>
+							</ul>-->
+							<div class="wrapper-lang">
+								<div class="active-lang">UK</div>
+								<div class="list-langs">
+									<ul class="ul-lang">
+										<li>RU</li>
+									</ul>
+								</div>
+							</div>
+						</li>
 					</ul>
 				</nav>
 			</div>
