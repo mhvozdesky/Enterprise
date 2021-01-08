@@ -18,12 +18,11 @@ from django.urls import path
 from django.conf.urls.static import static
 from django.conf import settings
 from django.urls import include
-from django.views.generic import RedirectView
+from about import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('index/', include('about.urls')),
-    path('', RedirectView.as_view(url='index/', permanent=True)),
+    path('', include('about.urls')),
     path('ckeditor/', include('ckeditor_uploader.urls')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
