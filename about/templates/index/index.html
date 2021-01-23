@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="{{ lang }}">
 <head>
 	{% load static %}
 	<meta charset="utf-8">
@@ -46,10 +46,20 @@
 						<li class="nav_item log-nav"></li>
 						<li class="nav_item lang-nav">
 							<div class="wrapper-lang">
-								<div class="active-lang">UK</div>
+								<div class="active-lang">
+									{% if lang == 'ru' %}
+										RU
+									{% else %}
+										UK	
+									{% endif %}
+								</div>
 								<div class="list-langs">
 									<ul class="ul-lang">
-										<li><a href="{{ request.path }}ru">RU</a></li>
+										{% if lang == 'ru' %}
+											<li><a href="{{ path_other_lang }}">UK</a></li>
+										{% else %}
+											<li><a href="{{ path_other_lang }}">RU</a></li>	
+										{% endif %}
 									</ul>
 								</div>
 							</div>
