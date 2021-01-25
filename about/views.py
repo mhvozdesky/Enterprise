@@ -6,9 +6,12 @@ def index(request):
     if len(re.findall(r'^/ru', request.path)) > 0:
         lang = 'ru'
         path_other_lang = request.path[3:] + r'/'
+        pref = '_ru'
     else:
         lang = 'uk'
         path_other_lang = request.path + 'ru'
+    
+    
         
     count_slides = MainSlider.objects.all().count()
     list_slides = MainSlider.objects.all()
@@ -17,6 +20,7 @@ def index(request):
     last_promotion = Promotion.objects.all()[0]
     
     context = {
+        'pref': pref,
         'lang': lang,
         'path_other_lang': path_other_lang,
         'count_slides': count_slides,
