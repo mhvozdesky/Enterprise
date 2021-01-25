@@ -4,7 +4,7 @@ from about.models import MainSlider, Automobiles, News, Promotion
 
 def index(request):
     if len(re.findall(r'^/ru', request.path)) > 0:
-        lang = 'ru'
+        lang = 'ru'#
         path_other_lang = request.path[3:] + r'/'
         pref = '_ru'
     else:
