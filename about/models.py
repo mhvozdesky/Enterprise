@@ -3,12 +3,11 @@ from django.db import models
 from ckeditor.fields import RichTextField
 
 
+
 class Languages(models.Model):
     language_name = models.CharField(max_length=200, default='')
     
-class Title(models.Model):
-    language = models.OneToOneField(Languages, on_delete = models.CASCADE, primary_key = True)
-    title_description = models.CharField(max_length=54)
+
 
 class Short_description(models.Model):
     language = models.OneToOneField(Languages, on_delete = models.CASCADE, primary_key = True)
@@ -17,6 +16,24 @@ class Short_description(models.Model):
 class Text(models.Model):
     language = models.OneToOneField(Languages, on_delete = models.CASCADE, primary_key = True)
     text = RichTextField(default='')
+    
+class News(models.Model):
+    #the model presents News
+    
+    #title = models.ForeignKey(Title, on_delete = models.CASCADE)
+    short_description = models.ForeignKey(Short_description, on_delete = models.CASCADE)
+    publication_date = models.DateField(default=datetime.date.today)
+    picture_563_266 = models.ImageField('picture 563x266', upload_to='images/news_and_promotion', default=r'images\news1.jpg') 
+    text = models.ForeignKey(Text, on_delete = models.CASCADE)
+    
+    class Meta:
+        verbose_name_plural = "News"
+        ordering = ['publication_date']  
+        
+class Title(models.Model):
+    language = models.OneToOneField(Languages, on_delete = models.CASCADE, primary_key = True)
+    title_description = models.CharField(max_length=54)
+    news = models.ForeignKey(News, on_delete = models.CASCADE, default=1)        
 
 class MainSlider(models.Model):
     #the model presents the main slider
@@ -46,18 +63,20 @@ class Automobiles(models.Model):
     class Meta:
         verbose_name_plural = "Automobiles"    
 
-class News(models.Model):
-    #the model presents News
+#class News(models.Model):
+    ##the model presents News
     
-    title = models.ForeignKey(Title, on_delete = models.CASCADE)
-    short_description = models.ForeignKey(Short_description, on_delete = models.CASCADE)
-    publication_date = models.DateField(default=datetime.date.today)
-    picture_563_266 = models.ImageField('picture 563x266', upload_to='images/news_and_promotion', default=r'images\news1.jpg') 
-    text = models.ForeignKey(Text, on_delete = models.CASCADE)
+    ##title = models.ForeignKey(Title, on_delete = models.CASCADE)
+    #short_description = models.ForeignKey(Short_description, on_delete = models.CASCADE)
+    #publication_date = models.DateField(default=datetime.date.today)
+    #picture_563_266 = models.ImageField('picture 563x266', upload_to='images/news_and_promotion', default=r'images\news1.jpg') 
+    #text = models.ForeignKey(Text, on_delete = models.CASCADE)
     
-    class Meta:
-        verbose_name_plural = "News"
-        ordering = ['publication_date']
+    #class Meta:
+        #verbose_name_plural = "News"
+        #ordering = ['publication_date']
+    
+   
 
 class Promotion(models.Model):
     #the model presents Automobiles
@@ -71,4 +90,6 @@ class Promotion(models.Model):
     class Meta:
         verbose_name_plural = "Promotion"  
         ordering = ['publication_date']
+        
+  
         
