@@ -43,6 +43,7 @@ class News_description(models.Model):
     
     class Meta:
         verbose_name_plural = "News_description" 
+        unique_together = ('News', 'language',)
 
         
 class Title(models.Model):
