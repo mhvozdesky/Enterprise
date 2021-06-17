@@ -10,17 +10,7 @@ class Languages(models.Model):
     class Meta:
         verbose_name_plural = "Languages"    
 
-
-class Short_description(models.Model):
-    language = models.OneToOneField(Languages, on_delete = models.CASCADE, primary_key = True)
-    description = models.CharField(default='', max_length=138)
-
-
-class Text(models.Model):
-    language = models.OneToOneField(Languages, on_delete = models.CASCADE, primary_key = True)
-    text = RichTextField(default='')
-
-    
+  
 class News(models.Model):
     #the model presents News
     
@@ -38,8 +28,8 @@ class News_description(models.Model):
     News = models.ForeignKey(News, on_delete = models.CASCADE)
     title = models.CharField(default='', max_length=138)
     language = models.ForeignKey(Languages, on_delete = models.CASCADE)
-    #short_description = models.ForeignKey(Short_description, on_delete = models.CASCADE)
-    #text = models.ForeignKey(Text, on_delete = models.CASCADE)
+    short_description = models.CharField(default='', max_length=138)
+    text = RichTextField(default='')
     
     class Meta:
         verbose_name_plural = "News_description" 
@@ -73,42 +63,46 @@ class MainSlider(models.Model):
 class Automobiles(models.Model):
     #the model presents Automobiles
     
-    title = models.ForeignKey(Title, on_delete = models.CASCADE)
     picture_770_340 = models.ImageField('picture 770x340', upload_to='images/automobiles')
     availability_hybrid = models.BooleanField(default=False)
     price_starts = models.CharField(max_length=20)
     
     class Meta:
-        verbose_name_plural = "Automobiles"    
+        verbose_name_plural = "Automobiles" 
+        
+class Automobiles_description(models.Model):
+    
+    Automobile = models.ForeignKey(Automobiles, on_delete = models.CASCADE)
+    title = models.CharField(default='', max_length=138)
+    language = models.ForeignKey(Languages, on_delete = models.CASCADE)
+    
+    class Meta:
+        verbose_name_plural = "Automobiles_description" 
+        unique_together = ('Automobile', 'language',)         
 
 
-#class News(models.Model):
-    ##the model presents News
-    
-    ##title = models.ForeignKey(Title, on_delete = models.CASCADE)
-    #short_description = models.ForeignKey(Short_description, on_delete = models.CASCADE)
-    #publication_date = models.DateField(default=datetime.date.today)
-    #picture_563_266 = models.ImageField('picture 563x266', upload_to='images/news_and_promotion', default=r'images\news1.jpg') 
-    #text = models.ForeignKey(Text, on_delete = models.CASCADE)
-    
-    #class Meta:
-        #verbose_name_plural = "News"
-        #ordering = ['publication_date']
-    
-   
 
 class Promotion(models.Model):
     #the model presents Automobiles
     
-    title = models.ForeignKey(Title, on_delete = models.CASCADE)
-    short_description = models.ForeignKey(Short_description, on_delete = models.CASCADE)
     publication_date = models.DateField(default=datetime.date.today)
     picture_563_266 = models.ImageField('picture 563x266', upload_to='images/news_and_promotion', default=r'images\news1.jpg')
-    text = models.ForeignKey(Text, on_delete = models.CASCADE)
     
     class Meta:
         verbose_name_plural = "Promotion"  
         ordering = ['publication_date']
+        
+class Promotion_description(models.Model):
+    
+    Promotion = models.ForeignKey(Promotion, on_delete = models.CASCADE)
+    title = models.CharField(default='', max_length=138)
+    language = models.ForeignKey(Languages, on_delete = models.CASCADE)
+    short_description = models.CharField(default='', max_length=138)
+    text = RichTextField(default='')
+    
+    class Meta:
+        verbose_name_plural = "Promotion_description" 
+        unique_together = ('Promotion', 'language',)        
         
   
         
