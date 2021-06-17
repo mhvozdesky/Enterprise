@@ -1,6 +1,6 @@
 import re
 from django.shortcuts import render
-from about.models import MainSlider, Automobiles, News, Promotion, Languages
+from about.models import MainSlider, Automobiles, News, Promotion, Languages, News_description
 
 def index(request):
     if len(re.findall(r'^/ru', request.path)) > 0:
