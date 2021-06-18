@@ -103,8 +103,8 @@
 			   	{% for automobile in list_automobiles %}
 			   	   <div class="auto-item">
 				   		<a href="#">
-					   		<div class="auto-img" style='background-image: url("{{ automobile.picture_770_340.url }}");'></div>
-					   		<div class="auto-name"><strong>{{ automobile.title }}</strong> 
+					   		<div class="auto-img" style='background-image: url("{{ automobile.url_auto.url }}");'></div>
+					   		<div class="auto-name"><strong>{{ automobile.title_auto }}</strong> 
 						   		{% if automobile.availability_hybrid %}
 						   			<span class="hybrid">+гібрид</span>
 						   		{% endif %}
@@ -156,13 +156,13 @@
 		<div class="content-block">
 			<div class="news-block">
 				<img src="{{ last_news.picture_563_266.url }}" class="img-news news-contern">
-				<div class="news-contern" ><h5>{{ last_news.title }}</h5> <span class="text-news">{{last_news.short_description|safe}}</span></div>
+				<div class="news-contern" ><h5>{{ title_news }}</h5> <span class="text-news">{{shot_description_news|safe}}</span></div>
 				{# <div class="news-contern" ><h5>{{ last_news.title }}</h5> {{last_news.content|safe}}</div> #}
 				<div class="more-text"><a href='#'>Читати далі</a></div>
 			</div>
 			<div class="promotion-block">
 				<img src="{{ last_promotion.picture_563_266.url }}" class="img-news news-contern">
-				<div class="news-contern" ><h5>{{ last_promotion.title }}</h5> <span class="text-news">{{last_promotion.short_description{{ pref }}|safe}}</span></div>
+				<div class="news-contern" ><h5>{{ title_promotion }}</h5> <span class="text-news">{{shot_description_promotion|safe}}</span></div>
 				<div class="more-text"><a href='#'>Читати далі</a></div>
 			</div>
 			<div class="news_buttons">
