@@ -1,0 +1,123 @@
+lang_dict = {
+    #Украинский
+    3: {
+        'header_menu': {
+            'cars': 'Автомобілі',
+            'maintenance': 'Сервіс',
+            'service': 'Послуги',
+            'promotions_news': 'Акції та новини',
+            'accessories': 'Аксесуари',
+            'spares': 'Запчастини',
+            'about_us': 'Про нас',
+        },   
+        'lineup': 'Модельний ряд',
+        'our_services': 'Наші послуги',
+        'list_services': {
+            'test_drive': 'Тест-драйв',
+            'corporate_sales': 'Корпоративні продажі',
+            'order_car': 'Замовити авто',
+            'maintenance': 'Сервіс',
+            'original_spares': 'Оригінальні запчастини',
+            'carwash': 'Мийка',
+        },
+        'promotions_news': 'Акції та новини',
+        'button_promotions': 'Акції',
+        'button__news': 'Новини',
+        'button__send': 'Відправити',
+        'on_map': 'Ми на карті',
+        'contacts': {
+            'sales_department': 'Відділ продажу',
+            'maintenance_department': 'Відділ сервісу',
+            'e_mail': 'E-mail',
+        },
+        'we_in_social': 'Ми в соціальних мережах',
+        'footer': {
+            'lineup': 'Модельний ряд',
+            'maintenance': 'Сервіс',
+            'list_maintenance': {
+                'maintenance': 'Ремонт і ТО',
+                'tire_fitting': 'Шиномонтаж',
+                'body_repair': 'Кузовний ремонт',
+                'diagnostics': 'Діагностика',
+                'carwash': 'Мийка',
+            },
+            'info_corporate': 'Корпоративним клієнтам',
+            'promotions_news': 'Акції та новини',
+            'feedback': 'Зв\'затись з нами',
+            'list_feedback': {
+                'test_drive': 'Запис на тест-драйв',
+                'get_consultation': 'Отримати консультацію',
+                'order_car': 'Замовити авто',
+                'want_maintenance': 'Запис на сервіс',
+                'want_call': 'Замовити дзвінок',
+                'subscribe_news': 'Підписатись на новини',
+            },
+            'about_us': 'Про нас',
+            'contacts': 'Контакти',
+            'vacancy': 'Вакансії',
+        },
+        
+    },
+    #Русский
+    4: {
+        'header_menu': {
+            'cars': 'Автомобили',
+            'maintenance': 'Сервим',
+            'service': 'Услуги',
+            'promotions_news': 'Акции и новости',
+            'accessories': 'Аксесуары',
+            'spares': 'Запчасти',
+            'about_us': 'О нас',
+        },   
+        'lineup': 'Модельный ряд',
+        'our_services': 'Наши услуги',
+        'list_services': {
+            'test_drive': 'Тест-драйв',
+            'corporate_sales': 'Корпоративные продажи',
+            'order_car': 'Заказать авто',
+            'maintenance': 'Сервис',
+            'original_spares': 'Оригинальные запчасти',
+            'carwash': 'Мойка',
+        },
+        'promotions_news': 'Акции и новости',
+        'button_promotions': 'Акции',
+        'button__news': 'Новости',
+        'button__send': 'Отправить',
+        'on_map': 'Ми на карте',
+        'contacts': {
+            'sales_department': 'Отдел продаж',
+            'maintenance_department': 'Отдел сервиса',
+            'e_mail': 'E-mail',
+        },
+        'we_in_social': 'Мы в социальных сетях',
+        'footer': {
+            'lineup': 'Модельный ряд',
+            'maintenance': 'Сервис',
+            'list_maintenance': {
+                'maintenance': 'Ремонт и ТО',
+                'tire_fitting': 'Шиномонтаж',
+                'body_repair': 'Кузовной ремонт',
+                'diagnostics': 'Диагностика',
+                'carwash': 'Мойка',
+            },
+            'info_corporate': 'Корпоративным клиентам',
+            'promotions_news': 'Акции и новости',
+            'feedback': 'Связаться с нами',
+            'list_feedback': {
+                'test_drive': 'Запись на тест-драйв',
+                'get_consultation': 'Получить консультацию',
+                'order_car': 'Заказать авто',
+                'want_maintenance': 'Запись на сервис',
+                'want_call': 'Заказать звонок',
+                'subscribe_news': 'Подписаться на новости',
+            },
+            'about_us': 'О нас',
+            'contacts': 'Контакты',
+            'vacancy': 'Вакансии',
+        },
+        
+    },
+}
+
+if __name__ == '__main__':
+    print

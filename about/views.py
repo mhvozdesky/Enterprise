@@ -1,6 +1,8 @@
 import re
 from django.shortcuts import render
 from about.models import MainSlider, Automobiles, News, Promotion, Languages, News_description, Promotion_description, Automobiles_description
+#from ..about.local_languages import 
+from local_languages import lang_file
 
 def index(request):
     if len(re.findall(r'^/ru', request.path)) > 0:
@@ -13,6 +15,7 @@ def index(request):
         lang_id = 3
     
     
+    lang_dict = lang_file.lang_dict[lang_id]
         
     count_slides = MainSlider.objects.all().count()
     list_slides = MainSlider.objects.all()
