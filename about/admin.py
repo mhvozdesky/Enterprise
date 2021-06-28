@@ -34,6 +34,7 @@ admin.site.register(Promotion, PromotionAdmin)
 admin.site.register(Languages)
 admin.site.register(Title)
 admin.site.register(News_description)
+admin.site.register(Automobiles_description)
 
 
 
