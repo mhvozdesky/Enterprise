@@ -24,6 +24,7 @@ def index(request):
     
     title_news = ''
     shot_description_news = ''
+    
     title_promotion = ''
     shot_description_promotion = ''   
     
@@ -67,7 +68,7 @@ def index(request):
         'title_news': title_news,
         'shot_description_news': shot_description_news,
         'title_promotion': title_promotion,
-        'shot_description_promotion': title_news,
+        'shot_description_promotion': shot_description_promotion,
         'lang_dict': lang_dict,
         
     }

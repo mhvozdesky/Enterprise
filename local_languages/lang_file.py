@@ -19,6 +19,7 @@ lang_dict = {
         'lineup': 'Модельний ряд',
         'price': 'Ціна ',
         'price_from': 'від ',
+        'hybrid': '+гібрид',
         'our_services': 'Наші послуги',
         'list_services': {
             'test_drive': 'Тест-драйв',
@@ -106,6 +107,7 @@ lang_dict = {
         'lineup': 'Модельный ряд',
         'price': 'Цена ',
         'price_from': 'от ',
+        'hybrid': '+гибрид',
         'our_services': 'Наши услуги',
         'list_services': {
             'test_drive': 'Тест-драйв',
@@ -169,7 +171,7 @@ lang_dict = {
             'contacts': 'Контакты',
             'menu': 'Меню',
         },
-        'more_detail': 'Детальнее',
+        'more_detail': 'Подробнее',
         'read_more': 'Читать дальше',
         
     },
