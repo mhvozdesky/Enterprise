@@ -1,7 +1,6 @@
 import re
 from django.shortcuts import render
 from about.models import MainSlider, Automobiles, News, Promotion, Languages, News_description, Promotion_description, Automobiles_description
-#from ..about.local_languages import 
 from local_languages import lang_file
 
 def index(request):
@@ -69,6 +68,7 @@ def index(request):
         'shot_description_news': shot_description_news,
         'title_promotion': title_promotion,
         'shot_description_promotion': title_news,
+        'lang_dict': lang_dict,
         
     }
     

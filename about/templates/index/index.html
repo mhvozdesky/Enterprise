@@ -29,20 +29,20 @@
 		<header class="header">
 			<div class="header-top">
 				<div class="sub-header logo" style="background-image: url('{% static 'site_images\toyota-logo-1989-2560x1440-1024x560 (1).png' %}'); background-size: 30vh; background-position: 35% 0%; background-repeat:no-repeat;"></div>
-				<div class="sub-header contact"><div class="header-contact">м. Київ,<br>вул. Арх. Вербицького 1715 В</div></div>
-				<div class="sub-header tel"><div class="tel-sales"><div>Відділ продажу</div><div>(044) 000-00-00</div></div></div>
-				<div class="sub-header tel"><div class="tel-sales"><div>Відділ сервісу</div><div>(044) 000-00-00</div></div></div>
+				<div class="sub-header contact"><div class="header-contact">{{lang_dict.header_menu.city}}<br>{{lang_dict.header_menu.address}}</div></div>
+				<div class="sub-header tel"><div class="tel-sales"><div>{{lang_dict.header_menu.sales_department}}</div><div>{{lang_dict.header_menu.tel_sales_department}}</div></div></div>
+				<div class="sub-header tel"><div class="tel-sales"><div>{{lang_dict.header_menu.maintenance_department}}</div><div>{{lang_dict.header_menu.tel_maintenance_department}}</div></div></div>
 			</div>
 			<div class="header-bottom">
 				<nav class="nav" id="nav">
 					<ul class="nav-ul">
-						<li class="nav_item"><a href="#" onclick=test()>Автомобілі</a></li>
-						<li class="nav_item"><a href="#">Сервіс</a></li>
-						<li class="nav_item"><a href="#">Послуги</a></li>
-						<li class="nav_item"><a href="#">Акції та новини</a></li>
-						<li class="nav_item"><a href="#">Аксесуари</a></li>
-						<li class="nav_item"><a href="#">Запчастини</a></li>
-						<li class="nav_item"><a href="#">Про нас</a></li>
+						<li class="nav_item"><a href="#" onclick=test()>{{lang_dict.header_menu.cars}}</a></li>
+						<li class="nav_item"><a href="#">{{lang_dict.header_menu.maintenance}}</a></li>
+						<li class="nav_item"><a href="#">{{lang_dict.header_menu.service}}</a></li>
+						<li class="nav_item"><a href="#">{{lang_dict.header_menu.promotions_news}}</a></li>
+						<li class="nav_item"><a href="#">{{lang_dict.header_menu.accessories}}</a></li>
+						<li class="nav_item"><a href="#">{{lang_dict.header_menu.spares}}</a></li>
+						<li class="nav_item"><a href="#">{{lang_dict.header_menu.about_us}}</a></li>
 						<li class="nav_item log-nav"></li>
 						<li class="nav_item lang-nav">
 							<div class="wrapper-lang">
@@ -69,12 +69,12 @@
 			</div>
 		</header>
 		<div class="nav-section-indicators">
-			<div class="data-section-to-1 indicators indicator-1" onclick=switch_section("1")><span class="text-indecator">Меню</span></div>
-			<div class="data-section-to-2 indicators indicator-2" onclick=switch_section("2")><span class="text-indecator">Модельний ряд</span></div>
-			<div class="data-section-to-3 indicators indicator-3" onclick=switch_section("3")><span class="text-indecator">Наші послуги</span></div>
-			<div class="data-section-to-4 indicators indicator-4" onclick=switch_section("4")><span class="text-indecator">Новини та акції</span></div>
-			<div class="data-section-to-5 indicators indicator-5" onclick=switch_section("5")><span class="text-indecator">Контакти</span></div>
-			<div class="data-section-to-6 indicators indicator-6" onclick=switch_section("6")><span class="text-indecator">Меню</span></div>
+			<div class="data-section-to-1 indicators indicator-1" onclick=switch_section("1")><span class="text-indecator">{{lang_dict.list_nav_section_indicators.menu}}</span></div>
+			<div class="data-section-to-2 indicators indicator-2" onclick=switch_section("2")><span class="text-indecator">{{lang_dict.list_nav_section_indicators.lineup}}</span></div>
+			<div class="data-section-to-3 indicators indicator-3" onclick=switch_section("3")><span class="text-indecator">{{lang_dict.list_nav_section_indicators.our_services}}</span></div>
+			<div class="data-section-to-4 indicators indicator-4" onclick=switch_section("4")><span class="text-indecator">{{lang_dict.list_nav_section_indicators.promotions_news}}</span></div>
+			<div class="data-section-to-5 indicators indicator-5" onclick=switch_section("5")><span class="text-indecator">{{lang_dict.list_nav_section_indicators.contacts}}</span></div>
+			<div class="data-section-to-6 indicators indicator-6" onclick=switch_section("6")><span class="text-indecator">{{lang_dict.list_nav_section_indicators.menu}}</span></div>
 		</div>
 	<section class="section_1">
 		<div class="slider">
@@ -95,7 +95,7 @@
 	<section class="section_2 background-image" style="background-image: url('');">
 		<div class="empty-for-nav"></div>
 		<div class="grand-caption">
-			<div class="caption caption-let">МОДЕЛЬНИЙ РЯД</div>
+			<div class="caption caption-let">{{lang_dict.lineup}}</div>
 			<div class="caption-lin car-line"><hr></div>
 		</div>
 		<div class="model-range">
@@ -109,9 +109,9 @@
 						   			<span class="hybrid">+гібрид</span>
 						   		{% endif %}
 					   		</div>
-					   		<div class="auto-price">Ціна <span class="price">від {{ automobile.price_starts }}</span> грн</div>
+					   		<div class="auto-price">{{lang_dict.price}}<span class="price">{{lang_dict.price_from}}{{ automobile.price_starts }}</span> грн</div>
 					   		<div class="auto-line"><hr></div>
-					   		<div class="auto-detail">Детальніше</div>
+					   		<div class="auto-detail">{{lang_dict.more_detail}}</div>
 					   	</a>
 			   		</div>
 			   {% endfor %} 
@@ -121,28 +121,28 @@
 	<section class="section_3 background-image " style="background-image: url('{% static 'site_images/section3.jpg' %}');">
 		<div class="empty-for-nav"></div>
 		<div class="grand-caption">
-			<div class="caption caption-let services">НАШІ ПОСЛУГИ</div>
+			<div class="caption caption-let services">{{lang_dict.our_services}}</div>
 			<div class="caption-lin services-line"><hr></div>
 		</div>
 		<div class="services-range">
 			<div class="wrapper-servic" style="grid-template-columns: repeat(3, 1fr);">
 			   <div class="services-item">
-			   		<a href="#"><div class="cervice-content" style='background-image: url("{% static "site_images/driver.png" %}");'><span>Тест-драйв</span></div></a>
+			   		<a href="#"><div class="cervice-content" style='background-image: url("{% static "site_images/driver.png" %}");'><span>{{lang_dict.list_services.test_drive}}</span></div></a>
 			   </div>
 			   <div class="services-item">
-			   		<a href="#"><div class="cervice-content" style='background-image: url("{% static "site_images/car.png" %}");'><span style="top: 25%;">Корпоративні продажі</span></div></a>
+			   		<a href="#"><div class="cervice-content" style='background-image: url("{% static "site_images/car.png" %}");'><span style="top: 25%;">{{lang_dict.list_services.corporate_sales}}</span></div></a>
 			   </div>
 			   <div class="services-item">
-			   		<a href="#"><div class="cervice-content" style='background-image: url("{% static "site_images/transport.png" %}");'><span>Замовити авто</span></div></a>
+			   		<a href="#"><div class="cervice-content" style='background-image: url("{% static "site_images/transport.png" %}");'><span>{{lang_dict.list_services.order_car}}</span></div></a>
 			   </div>
 			   <div class="services-item">
-			   		<a href="#"><div class="cervice-content" style='background-image: url("{% static "site_images/tire.png" %}");'><span>Сервіс</span></div></a>
+			   		<a href="#"><div class="cervice-content" style='background-image: url("{% static "site_images/tire.png" %}");'><span>{{lang_dict.list_services.maintenance}}</span></div></a>
 			   </div>
 			   <div class="services-item">
-			   		<a href="#"><div class="cervice-content" style='background-image: url("{% static "site_images/car (1).png" %}");'><span style="top: 25%;">Оригінальні запчастини</span></div></a>
+			   		<a href="#"><div class="cervice-content" style='background-image: url("{% static "site_images/car (1).png" %}");'><span style="top: 25%;">{{lang_dict.list_services.original_spares}}</span></div></a>
 			   </div>
 			   <div class="services-item">
-			   		<a href="#"><div class="cervice-content" style='background-image: url("{% static "site_images/car (3).png" %}");'><span>Мийка</span></div></a>
+			   		<a href="#"><div class="cervice-content" style='background-image: url("{% static "site_images/car (3).png" %}");'><span>{{lang_dict.list_services.carwash}}</span></div></a>
 			   </div>
 			</div>
 		</div>
@@ -150,7 +150,7 @@
 	<section class="section_4 background-image" style="background-image: url('');">
 		<div class="empty-for-nav"></div>
 		<div class="grand-caption">
-			<div class="caption caption-let news">НОВИНИ ТА АКЦІЇ</div>
+			<div class="caption caption-let news">{{lang_dict.promotions_news}}</div>
 			<div class="caption-lin news-line"><hr></div>
 		</div>
 		<div class="content-block">
@@ -158,19 +158,19 @@
 				<img src="{{ last_news.picture_563_266.url }}" class="img-news news-contern">
 				<div class="news-contern" ><h5>{{ title_news }}</h5> <span class="text-news">{{shot_description_news|safe}}</span></div>
 				{# <div class="news-contern" ><h5>{{ last_news.title }}</h5> {{last_news.content|safe}}</div> #}
-				<div class="more-text"><a href='#'>Читати далі</a></div>
+				<div class="more-text"><a href='#'>{{lang_dict.read_more}}</a></div>
 			</div>
 			<div class="promotion-block">
 				<img src="{{ last_promotion.picture_563_266.url }}" class="img-news news-contern">
 				<div class="news-contern" ><h5>{{ title_promotion }}</h5> <span class="text-news">{{shot_description_promotion|safe}}</span></div>
-				<div class="more-text"><a href='#'>Читати далі</a></div>
+				<div class="more-text"><a href='#'>{{lang_dict.read_more}}</a></div>
 			</div>
 			<div class="news_buttons">
 				<div class="conteiner_button">
-					<a href="#" class="promotion_button"><div ><span>Акції</span></div></a>
+					<a href="#" class="promotion_button"><div ><span>{{lang_dict.button_promotions}}</span></div></a>
 				</div>
 				<div class="conteiner_button">
-					<a href="#" class="news_button"><div ><span>Новини</span></div></a>
+					<a href="#" class="news_button"><div ><span>{{lang_dict.button_news}}</span></div></a>
 				</div>
 			</div>
 		</div>
@@ -178,10 +178,10 @@
 			<form style="height: 100%">
 				<label for="email_fild">
 					
-					<span>Бажаєте бути в курсі останніх новин Enterprise?<br>Підпишіться на розсилку:</span>
+					<span>{{lang_dict.list_subscribe.text}}<br>{{lang_dict.list_subscribe.call_action}}</span>
 					<input type="text" id="email_fild" name="email_fild" placeholder="E-mail">
 				</label>
-				<button type="submit" class="button_submit_subscription">Відправити</button>
+				<button type="submit" class="button_submit_subscription">{{lang_dict.button_send}}</button>
 				
 			</form>
 		</div>
@@ -190,14 +190,14 @@
 		<div class="empty-for-nav"></div>
 		<div class="contact-content">
 			<div class="contacts">
-				<h2>Контакти</h2>
+				<h2>{{lang_dict.contacts.contacts}}</h2>
 				<ul class="contact-list">
-					<li class="contact-item item-tel"><span>Відділ продажу</span><br>(044) 000-00-00</li>
-					<li class="contact-item item-tel"><span>Відділ сервісу</span><br>(044) 000-00-00</li>
-					<li class="contact-item item-mail"><span>E-mail</span><br>test@enterprice.com</li>
+					<li class="contact-item item-tel"><span>{{lang_dict.contacts.sales_department}}</span><br>{{lang_dict.contacts.tel_sales_department}}</li>
+					<li class="contact-item item-tel"><span>{{lang_dict.contacts.maintenance_department}}</span><br>{{lang_dict.contacts.tel_maintenance_department}}</li>
+					<li class="contact-item item-mail"><span>{{lang_dict.contacts.e_mail}}</span><br>test@enterprice.com</li>
 				</ul>
 				<div class="social-networks">
-					<span class="social-label">Ми в соціальних мережах</span>
+					<span class="social-label">{{lang_dict.we_in_social}}</span>
 					<ul class="social-list">
 						<a href="#"><li class="social-item telegram" style='background-image: url("{% static "site_images/1200px-Telegram_2019_Logo.svg.png" %}");'></li></a>
 						<a href="#"><li class="social-item instagram" style='background-image: url("{% static "site_images/a25f4f58938bbe61357ebca42d23866f.png" %}");'></li></a>
@@ -207,7 +207,7 @@
 				</div>
 			</div>
 			<div class="we-on-map">
-				<h2>Ми на карті</h2>
+				<h2>{{lang_dict.on_map}}</h2>
 				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2542.997703316464!2d30.681900815894856!3d50.403880398600236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c48cfe1a8f77%3A0x7898d6fff0cddc40!2sBoryspilska!5e0!3m2!1sru!2sua!4v1598702862396!5m2!1sru!2sua" width="87.582%" height="78.9177%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
 			</div>
 		</div>
@@ -216,7 +216,7 @@
 		<div class="empty-for-nav"></div>
 		<div class="content-footer">
 			<div class="footer-item">
-				<p>Модельний ряд</p>
+				<p>{{lang_dict.footer.lineup}}</p>
 				<ul>
 					<li>Model1</li>
 					<li>Model2</li>
@@ -230,34 +230,34 @@
 				</ul>
 			</div>
 			<div class="footer-item">
-				<p>Сервіс</p>
+				<p>{{lang_dict.footer.maintenance}}</p>
 				<ul>
-					<li>Ремонт і ТО</li>
-					<li>Шиномонтаж</li>
-					<li>Кузовний ремонт</li>
-					<li>Діагностика</li>
-					<li>Мийка</li>
+					<li>{{lang_dict.footer.list_maintenance.maintenance}}</li>
+					<li>{{lang_dict.footer.list_maintenance.tire_fitting}}</li>
+					<li>{{lang_dict.footer.list_maintenance.body_repair}}</li>
+					<li>{{lang_dict.footer.list_maintenance.diagnostics}}</li>
+					<li>{{lang_dict.footer.list_maintenance.carwash}}</li>
 				</ul>
 			</div>
 			<div class="footer-item">
-				<p>Зв'язатися з нами</p>
+				<p>{{lang_dict.footer.feedback}}</p>
 				<ul>
-					<li>Запис на тест-драйв</li>
-					<li>Отримати консультацію</li>
-					<li>Замовити авто</li>
-					<li>Запис на сервіс</li>
-					<li>Замовити дзвінок</li>
-					<li>Підписатися на новини</li>
+					<li>{{lang_dict.footer.list_feedback.test_drive}}</li>
+					<li>{{lang_dict.footer.list_feedback.get_consultation}}</li>
+					<li>{{lang_dict.footer.list_feedback.order_car}}</li>
+					<li>{{lang_dict.footer.list_feedback.want_maintenance}}</li>
+					<li>{{lang_dict.footer.list_feedback.want_call}}</li>
+					<li>{{lang_dict.footer.list_feedback.subscribe_news}}</li>
 				</ul>
 			</div>
 			<div class="footer-item">
-				<p>Загальна інформація</p>
+				<p>{{lang_dict.footer.list_common_information.common_information}}</p>
 				<ul>
-					<li>Корпоративним клієнтам</li>
-					<li>Акції і новини</li>
-					<li>Про нас</li>
-					<li>Контакти</li>
-					<li>Вакансії</li>
+					<li>{{lang_dict.footer.list_common_information.info_corporate}}</li>
+					<li>{{lang_dict.footer.list_common_information.promotions_news}}</li>
+					<li>{{lang_dict.footer.list_common_information.about_us}}</li>
+					<li>{{lang_dict.footer.list_common_information.contacts}}</li>
+					<li>{{lang_dict.footer.list_common_information.vacancy}}</li>
 				</ul>
 			</div>
 		</div>
