@@ -1,3 +1,8 @@
 ntcn
 sefsefs
+<<<<<<< HEAD
 sfefef
+=======
+sfefef
+esfsefse
+>>>>>>> master
