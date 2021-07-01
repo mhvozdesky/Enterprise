@@ -99,13 +99,16 @@
   padding-left: 0;
   margin: 0 15%;
   list-style: none;
+  height: 2.5614%;
 }
 
 .slider__indicators li {
   box-sizing: content-box;
   flex: 0 1 auto;
-  width: 30px;
-  height: 4px;
+  width: 2.2521%;
+  height: auto;
+  /*width: 30px;
+  height: 4px;*/
   margin-right: 3px;
   margin-left: 3px;
   text-indent: -999px;
