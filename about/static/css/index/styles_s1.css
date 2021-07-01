@@ -453,15 +453,21 @@ a, a:active {
 }
 
 .news_buttons span {
+	text-align: center;
+	display: block;
+	color: white;
+}
+
+/*.news_buttons span {
 	display: flex;
 	position: relative;
 	left: 25%;
 	color: white;
-}
+}*/
 
-.promotion_button span {
+/*.promotion_button span {
 	left: 35%;
-}
+}*/
 
 .subscription {
 	height: 13.342%;
@@ -479,7 +485,7 @@ a, a:active {
 	color: white;
 	font-style: italic;
 	font-weight: lighter;
-	font-size: 2em;
+	font-size: 1.85em;
 }
 
 .subscription input, button {
