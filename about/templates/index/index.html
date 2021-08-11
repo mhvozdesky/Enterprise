@@ -35,7 +35,45 @@
 			</div>
 			<div class="header-bottom">
 				<nav class="nav" id="nav">
-					<ul class="nav-ul">
+					<div class="general_container_menu">
+						<div class="container_menu">
+							<div class="menu-ul">
+								<div class="menu-ul_item"><a href="#">{{lang_dict.header_menu.cars}}</a></div>
+								<div class="menu-ul_item"><a href="#">{{lang_dict.header_menu.maintenance}}</a></li></div>
+								<div class="menu-ul_item"><a href="#">{{lang_dict.header_menu.service}}</a></div>
+								<div class="menu-ul_item"><a href="#">{{lang_dict.header_menu.promotions_news}}</a></div>
+								<div class="menu-ul_item"><a href="#">{{lang_dict.header_menu.accessories}}</a></div>
+								<div class="menu-ul_item"><a href="#">{{lang_dict.header_menu.spares}}</a></div>
+								<div class="menu-ul_item"><a href="#">{{lang_dict.header_menu.about_us}}</a></div>
+							</div>
+						</div>
+						<div class="logo_lang">
+							<div class="logo_lang_ul">
+								<div class="logo_lang_ul_item"></div>
+								<div class="logo_lang_ul_item">
+									<div class="wrapper-lang">
+										<div class="active-lang">
+											{% if lang == 'ru' %}
+												RU
+											{% else %}
+												UK	
+											{% endif %}
+										</div>
+										<div class="list-langs">
+											<div class="ul-lang">
+												{% if lang == 'ru' %}
+													<div><a href="{{ path_other_lang }}">UK</a></div>
+												{% else %}
+													<div><a href="{{ path_other_lang }}">RU</a></div>	
+												{% endif %}
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<!--<ul class="nav-ul">
 						<li class="nav_item"><a href="#" onclick=test()>{{lang_dict.header_menu.cars}}</a></li>
 						<li class="nav_item"><a href="#">{{lang_dict.header_menu.maintenance}}</a></li>
 						<li class="nav_item"><a href="#">{{lang_dict.header_menu.service}}</a></li>
@@ -64,7 +102,7 @@
 								</div>
 							</div>
 						</li>
-					</ul>
+					</ul>-->
 				</nav>
 			</div>
 		</header>
