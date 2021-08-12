@@ -649,8 +649,9 @@ a, a:active {
 	display: none;
 }
 
-.nav_item::hover{
-	
+.nav .for-hover:hover{
+	border: 1px solid #737373;
+	box-shadow: 0 0 10px rgb(0 0 0 / 50%);
 }
 
 @media (max-aspect-ratio: 5/4) {
@@ -675,9 +676,6 @@ a, a:active {
 	.slider__item .w2560_h1080 {
 		display: block;
 	}
-}enu-ul_item{
-	padding-left: 50px;
-	padding-right: 50px;
 }
 
 @media (max-aspect-ratio: 5/4) {
@@ -690,13 +688,6 @@ a, a:active {
 @media (min-aspect-ratio: 5/4) and (max-aspect-ratio: 16/9) {
 	.slider__item .w1024_h768 {
 		display: block;
-	}
-	.menu-ul_item a{
-		font-size: 21px;
-	}
-	.menu-ul_item{
-		padding-left: 25px;
-		padding-right: 25px;
 	}
 }
 

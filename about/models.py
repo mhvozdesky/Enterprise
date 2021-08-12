@@ -8,7 +8,7 @@ class Languages(models.Model):
     language_name = models.CharField(max_length=200, default='')
     
     class Meta:
-        verbose_name_plural = "Languages"    
+        verbose_name_plural = "Языки"    
 
   
 class News(models.Model):
@@ -19,7 +19,7 @@ class News(models.Model):
     picture_563_266 = models.ImageField('picture 563x266', upload_to='images/news_and_promotion', default=r'images\news1.jpg') 
     
     class Meta:
-        verbose_name_plural = "News"
+        verbose_name_plural = "Новости"
         ordering = ['-publication_date']  
 
 
@@ -57,7 +57,7 @@ class MainSlider(models.Model):
     picture_2560_1080_ru = models.ImageField('picture 2560x1080 RU', upload_to='images/slider', default='')    
     
     class Meta:
-        verbose_name_plural = "Main Slider"
+        verbose_name_plural = "Слайдер на главной странице"
  
     
 class Automobiles(models.Model):
@@ -68,7 +68,7 @@ class Automobiles(models.Model):
     price_starts = models.CharField(max_length=20)
     
     class Meta:
-        verbose_name_plural = "Automobiles" 
+        verbose_name_plural = "Автомобили" 
         
 class Automobiles_description(models.Model):
     
@@ -89,7 +89,7 @@ class Promotion(models.Model):
     picture_563_266 = models.ImageField('picture 563x266', upload_to='images/news_and_promotion', default=r'images\news1.jpg')
     
     class Meta:
-        verbose_name_plural = "Promotion"  
+        verbose_name_plural = "Акции"  
         ordering = ['publication_date']
         
 class Promotion_description(models.Model):
