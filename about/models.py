@@ -7,6 +7,9 @@ from ckeditor.fields import RichTextField
 class Languages(models.Model):
     language_name = models.CharField(max_length=200, default='')
     
+    def __str__(self):        
+        return  self.language_name
+    
     class Meta:
         verbose_name_plural = "Языки"    
 
@@ -17,6 +20,11 @@ class News(models.Model):
     #title = models.ForeignKey(Title, on_delete = models.CASCADE)
     publication_date = models.DateField(default=datetime.date.today)
     picture_563_266 = models.ImageField('picture 563x266', upload_to='images/news_and_promotion', default=r'images\news1.jpg') 
+    
+    def __str__(self): 
+        
+        news_description_objects = News_description.objects.filter(News = self, language = 4)
+        return  news_description_objects[0].title    
     
     class Meta:
         verbose_name_plural = "Новости"
@@ -54,8 +62,9 @@ class MainSlider(models.Model):
     picture_1920_1080_ru = models.ImageField('picture 1920x1080 RU', upload_to='images/slider', default='')
     picture_1024_768_ru = models.ImageField('picture 1024x768 RU', upload_to='images/slider', default='')
     picture_1280_1024_ru = models.ImageField('picture 1280x1024 RU', upload_to='images/slider', default='')
-    picture_2560_1080_ru = models.ImageField('picture 2560x1080 RU', upload_to='images/slider', default='')    
+    picture_2560_1080_ru = models.ImageField('picture 2560x1080 RU', upload_to='images/slider', default='') 
     
+
     class Meta:
         verbose_name_plural = "Слайдер на главной странице"
  
@@ -66,6 +75,12 @@ class Automobiles(models.Model):
     picture_770_340 = models.ImageField('picture 770x340', upload_to='images/automobiles')
     availability_hybrid = models.BooleanField(default=False)
     price_starts = models.CharField(max_length=20)
+    
+    def __str__(self):
+        querySet_auto = Automobiles_description.objects.filter(Automobile = self.id, language = 4) 
+        auto = querySet_auto[0]
+        
+        return  'Автомобиль ' + auto.title
     
     class Meta:
         verbose_name_plural = "Автомобили" 
@@ -87,6 +102,11 @@ class Promotion(models.Model):
     
     publication_date = models.DateField(default=datetime.date.today)
     picture_563_266 = models.ImageField('picture 563x266', upload_to='images/news_and_promotion', default=r'images\news1.jpg')
+    
+    def __str__(self): 
+        
+        promotion_description_objects = Promotion_description.objects.filter(Promotion = self, language = 4)
+        return  promotion_description_objects[0].title      
     
     class Meta:
         verbose_name_plural = "Акции"  
