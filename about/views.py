@@ -73,5 +73,9 @@ def index(request):
         
     }
     
+    if request.path == r'/old' or request.path == r'/ru/old':
+        template = r'index\index_old.html'
+    else:
+        template = r'index\index.html'
 
-    return render(request, r'index\index.html', context=context)
+    return render(request, template, context=context)

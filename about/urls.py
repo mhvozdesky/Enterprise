@@ -5,5 +5,7 @@ from . import views
 urlpatterns = [
     path('', views.index, name='index'), 
     path('ru', views.index, name='index'),
-    #path('ru', RedirectView.as_view(url='', permanent=True)),
+    re_path(r'^old', views.index, name='index'),
+    re_path(r'^[a-zA-Z]{2}/old', views.index, name='index'),
+    
 ]
