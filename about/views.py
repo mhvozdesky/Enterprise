@@ -4,13 +4,13 @@ from about.models import MainSlider, Automobiles, News, Promotion, Languages, Ne
 from local_languages import lang_file
 
 def index(request):
-    if len(re.findall(r'^/ru', request.path)) > 0:
+    if len(re.findall(r'^/ru/', request.path)) > 0:
         lang = 'ru'#
-        path_other_lang = request.path[3:] + r'/'
+        path_other_lang = request.path[3:] #switch to Ukrainian
         lang_id = 4
     else:
         lang = 'uk'
-        path_other_lang = request.path + 'ru'
+        path_other_lang = r'/ru' + request.path #switch to Russian
         lang_id = 3
     
     
