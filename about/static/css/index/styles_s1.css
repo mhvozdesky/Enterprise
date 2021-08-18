@@ -1,6 +1,7 @@
 html, body{
 	margin: 0;
 	font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+	max-width: 100vw;
 }
 
 header{
@@ -8,6 +9,7 @@ header{
 	width: 100%;
 	background-color: #000000b3;
 	color: white;
+	overflow: hidden;
 }
 
 .header-top{
@@ -15,12 +17,18 @@ header{
 	height: 140px;
 }
 
-.header-logo, .header-sales, .header-maintenance{
-	flex: 1;
+.header-logo{
+	width: 17%
+}
+
+.header-sales, .header-maintenance{
+	/*flex: 1;*/
+	width: 17%
 }
 
 .header-address{
-	flex: 3;
+	/*flex: 3;*/
+	width: 49%;
 }
 
 .header-logo img{
@@ -82,14 +90,16 @@ header{
 }
 
 .header-menu{
-	flex: 5;
+	/*flex: 5;*/
+	width: 83%;
 	justify-content: space-between;
     padding-left: 100px;
     padding-right: 100px;
 }
 
 .header-other{
-	flex: 1;
+	/*flex: 1;*/
+	width: 17%;
 }
 
 .header-menu-item{
