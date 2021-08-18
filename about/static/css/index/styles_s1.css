@@ -74,13 +74,18 @@ header{
 	height: 100%;
 }
 
-.header-menu-item a{
+.header-menu a{
 	text-decoration: none;
 	color: black;
 }
 
 .header-other-lang{
 	text-transform: uppercase;
+	width: 110px;
+}
+
+.header-other-lang span{
+	text-align: center;
 }
 
 .header-menu-item, .header-other-lang{
@@ -105,9 +110,10 @@ header{
 .header-menu-item{
 	padding-right: 30px;
 	padding-left: 30px;
+	height: 100%;
 }
 
-.header-menu-item:hover{
+.header-other-lang:hover, .header-menu-item:hover{
 	border: 1px solid #737373;
 	box-shadow: 0 0 10px rgb(0 0 0 / 50%);
 }
