@@ -42,3 +42,66 @@ header{
 	padding-left: 55px;
 	background-position: left center;
 }
+
+.header-bottom{
+	display: flex;
+	background-color: #ffffff99;
+	height: 50px;
+}
+
+.header-bottom{
+	font-size: 24px;
+}
+
+.header-menu, .header-other{
+	display: flex;
+	color: black;
+}
+
+.header-other-logo{
+	height: 100%;
+}
+
+.header-other-logo img{
+	height: 100%;
+}
+
+.header-menu-item a{
+	text-decoration: none;
+	color: black;
+}
+
+.header-other-lang{
+	text-transform: uppercase;
+}
+
+.header-menu-item, .header-other-lang{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.header-menu{
+	flex: 5;
+	justify-content: space-between;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+.header-other{
+	flex: 1;
+}
+
+.header-menu-item{
+	padding-right: 30px;
+	padding-left: 30px;
+}
+
+.header-menu-item:hover{
+	border: 1px solid #737373;
+	box-shadow: 0 0 10px rgb(0 0 0 / 50%);
+}
+
+
+
+
