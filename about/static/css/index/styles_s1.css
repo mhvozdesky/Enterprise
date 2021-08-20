@@ -10,6 +10,7 @@ header{
 	background-color: #000000b3;
 	color: white;
 	overflow: hidden;
+	box-shadow: 0 5px 5px -5px rgb(0 0 0);
 }
 
 .header-top{
@@ -294,7 +295,23 @@ header{
 		height: 90px;
 	}
 	.header-menu{
-		display: none;
+		/*display: none;*/
+		display: block;
+		position: absolute;
+		top: 17%;
+		padding: 0;
+		width: 30%;
+		background-color: #b7b7b7;
+		box-shadow: 0 1px 4px rgb(0 0 0), -23px 0 20px -23px rgb(0 0 0 / 80%), 23px 0 20px -23px rgb(0 0 0 / 80%), 0 0 40px rgb(0 0 0 / 10%) inset;
+	}
+
+	.header-menu-item{
+		height: 30px;
+	}
+
+	.header-menu-item:hover{
+		border: 1px solid #737373;
+		box-shadow: 0 0 10px rgb(0 0 0 / 50%);
 	}
 
 	.header-bottom{
@@ -310,9 +327,15 @@ header{
 		display: block;
 	}
 
-	.list-menu-modile{
-		display: block;
+	.title-menu-modile div:hover{
+		background-color: #67676766;
 	}
+
+	.title-menu-modile a:focus{
+		border-radius: 10px;
+	}
+
+
 
 }
 
