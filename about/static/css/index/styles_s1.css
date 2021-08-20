@@ -150,6 +150,10 @@ header{
     color: black;
 }
 
+.header-menu-modile, .list-menu-modile{
+	display: none;
+}
+
 @media (max-width: 1569px){
 /*	.header-top{
 		height: 115px;
@@ -300,6 +304,14 @@ header{
 
 	.header-sales, .header-maintenance{
 		width: 26%;
+	}
+
+	.header-menu-modile{
+		display: block;
+	}
+
+	.list-menu-modile{
+		display: block;
 	}
 
 }
