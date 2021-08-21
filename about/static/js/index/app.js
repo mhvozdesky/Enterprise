@@ -13,8 +13,9 @@ function edit_menu_button(e){
   
   var header_menu = document.querySelector('.header-menu');
   var mobile_menu_button = document.querySelector('.title-menu-modile a');
+  var a = header_menu.classList;
 
-  if (!header_menu.contains(e.target) && !mobile_menu_button.contains(e.target)){
+  if (!header_menu.contains(e.target) && !mobile_menu_button.contains(e.target) && a.contains('activ')){
     header_menu.classList.toggle("activ");
   }
 

@@ -15,6 +15,7 @@ header{
 
 .header-top{
 	display: flex;
+	justify-content: space-evenly;
 	height: 140px;
 }
 
@@ -32,8 +33,7 @@ header{
 }
 
 .header-sales, .header-maintenance{
-	/*flex: 1;*/
-	width: 17%
+	width: 45%;
 }
 
 .header-address{
@@ -55,10 +55,16 @@ header{
 	font-size: 24px;
 }
 
+.header-tel{
+	display: flex;
+	width: 34%;
+}
+
 .header-sales-content, .header-maintenance-content{
 	background-repeat: no-repeat;
 	padding-left: 55px;
 	background-position: left center;
+	background-size: 43px;
 }
 
 .header-bottom{
@@ -169,7 +175,7 @@ header{
 	}
 
 	.header-address, .header-sales, .header-maintenance{
-		font-size: 25px;
+		font-size: 22px;
 	}
 
 	.header-menu{
@@ -196,9 +202,17 @@ header{
 		font-size: 20px;
 	}
 
+	.header-sales, .header-maintenance{
+		font-size: 17px;
+	}
+
 	.header-menu{
 		padding-left: 30px;
 		padding-right: 30px;
+	}
+
+	.header-sales-content, .header-maintenance-content{
+		background-size: 37px;
 	}
 
 }
@@ -229,11 +243,15 @@ header{
 		background-size: 75%;
 	}
 
+	.header-sales, .header-maintenance{
+		font-size: 17px;
+	}
+
 }
 
 @media (min-width: 890px) and (max-width: 1189px){
-	.header-sales, .header-maintenance{
-		width: 22%;
+	.header-tel{
+		width: 45%;
 	}
 
 	.header-address{
@@ -271,6 +289,11 @@ header{
 	.header-address, .header-sales, .header-maintenance{
 		font-size: 16px;
 	}
+
+	.header-sales-content, .header-maintenance-content{
+		background-size: 34px;
+		padding-left: 44px;
+	}
 }
 
 @media (max-width: 889px){
@@ -284,7 +307,8 @@ header{
 
 	.header-sales-content, .header-maintenance-content{
 		padding-left: 30px;
-		background-size: 15%;
+		background-size: 23px;
+		width: 100%;
 	}
 
 	.header-address, .header-sales, .header-maintenance{
@@ -298,7 +322,7 @@ header{
 		/*display: none;*/
 		display: block;
 		position: absolute;
-		top: 17%;
+		top: 140px;
 		padding: 0;
 		width: 30%;
 		background-color: #b7b7b7;
@@ -319,8 +343,8 @@ header{
 		justify-content: space-between;
 	}
 
-	.header-sales, .header-maintenance{
-		width: 26%;
+	.header-tel{
+		width: 52%;
 	}
 
 	.header-menu-modile{
@@ -335,6 +359,9 @@ header{
 		border-radius: 10px;
 	}
 
+	
+
+
 	.header-menu{
 		overflow: hidden;
 		width: 0px;
@@ -345,12 +372,85 @@ header{
 
 	.header-menu.activ{
 		width: 30%;
+		max-width: 200px;
+		min-width: 160px;
 		opacity: 1;
 		transition: ease-out 0.1s;
 	}
 
+	
 
+	.header-other-logo{
+		max-width: 50px;
+	}
 
 }
+
+@media (max-width: 564px){
+	.header-sales, .header-maintenance{
+		width: fit-content;
+		margin-left: auto;
+		margin-right: 15px;
+	}
+
+	.header-tel{
+		flex-direction: column;
+		justify-content: space-evenly;
+	}
+
+	.header-other{
+		width: 24%;
+	}
+
+	.header-other-logo{
+		min-width: 48px;
+	}
+}
+
+@media (max-width: 489px){
+	.header-sales, .header-maintenance{
+		margin: 0;
+	}
+
+	.header-logo{
+		width: 30%;
+	}
+
+	.header-address{
+		width: 40%;
+	}
+
+	.header-tel{
+		width: 30%;
+	}
+
+	.header-sales-content, .header-maintenance-content{
+		padding-left: 25px;
+		background-size: 19px;
+	}
+
+	.header-address, .header-sales, .header-maintenance{
+		font-size: 10px;
+	}
+
+	.header-address-content{
+		font-size: 12px;
+	}
+
+	.header-logo{
+		max-width: 125px;
+	}
+
+	.header-sales, .header-maintenance{
+		margin-left: auto;
+		margin-right: 15px;
+		width: fit-content;
+	}
+
+	.header-menu{
+		font-size: 14px;
+	}
+}
+
 
 
