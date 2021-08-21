@@ -335,6 +335,18 @@ header{
 		border-radius: 10px;
 	}
 
+	.header-menu{
+		overflow: hidden;
+		width: 0px;
+		opacity: 0;
+
+	}
+
+	.header-menu.activ{
+		width: 30%;
+		opacity: 1;
+	}
+
 
 
 }
