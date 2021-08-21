@@ -339,12 +339,14 @@ header{
 		overflow: hidden;
 		width: 0px;
 		opacity: 0;
+		transition: ease-out 0.1s;
 
 	}
 
 	.header-menu.activ{
 		width: 30%;
 		opacity: 1;
+		transition: ease-out 0.1s;
 	}
 
 
