@@ -25,29 +25,37 @@ section{
 	height: 100%;
 }
 
+.section_1{
+	position: relative;
+}
+
 .background_section_1{
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
 }
 
-.slider__item{
-	position: relative;
-
+.main{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: flex;
+    flex-direction: column;
 }
 
 .slider-content{
 	width: 100%;
-	height: 100%;
-	position: absolute;
-	top: 0;
-	left: 0;
+	flex: 1 0 auto;
 	display: flex;
+	flex-direction: column;
+    justify-content: center;
 }
 
 .slider-description{
 	width: 100%;
-	height: 500px;
+
 }
 
 

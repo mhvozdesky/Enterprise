@@ -20,107 +20,110 @@
 	</style>
 </head>
 <body>
-	<div class="header-conteiner">
-		<header>
-			<div class="header-top">
-				<div class="header-logo">
-					<!--<img src="{% static 'site_images\toyota-logo-1989-2560x1440-1024x560 (1).png' %}">-->
-				</div>
-				<div class="header-address">
-					<div class="header-address-content">
-						<div class="header-address-top"><span>{{lang_dict.header_menu.city}}</span></div>
-						<div class="header-address-bottom"><span>{{lang_dict.header_menu.address}}</span></div>
-					</div>
-				</div>
-				<div class="header-tel">
-					<div class="header-sales">
-						<div class="header-sales-content">
-							<div class="header-sales-top"><span>{{lang_dict.header_menu.sales_department}}</span></div>
-							<div class="header-sales-bottom"><span>{{lang_dict.header_menu.tel_sales_department}}</span></div>
-						</div>
-					</div>
-					<div class="header-maintenance">
-						<div class="header-maintenance-content">
-							<div class="header-maintenance-top"><span>{{lang_dict.header_menu.maintenance_department}}</span></div>
-							<div class="header-maintenance-top"><span>{{lang_dict.header_menu.tel_maintenance_department}}</span></div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="header-bottom">
-				<div class="header-menu-modile">
-					<div class="title-menu-modile">
-						<a href="" onclick="return false;"><div onclick="show_menu_modile(this)">
-							<span>Меню</span>
-						</div></a>
-					</div>
-				</div>
-				<div class="header-menu">
-					<a href="">
-						<div class="header-menu-item">
-							<div><span>{{lang_dict.header_menu.cars}}</span></div>
-						</div>
-					</a>
-					<a href="">
-						<div class="header-menu-item">
-							<div><span>{{lang_dict.header_menu.maintenance}}</span></div>
-						</div>
-					</a>
-					<a href="">
-						<div class="header-menu-item">
-							<div><span>{{lang_dict.header_menu.service}}</span></div>
-						</div>
-					</a>
-					<a href="">
-						<div class="header-menu-item">
-							<div><span></span>{{lang_dict.header_menu.promotions_news}}</div>
-						</div>
-					</a>
-					<a href="">
-						<div class="header-menu-item">
-							<div><span>{{lang_dict.header_menu.accessories}}</span></div>
-						</div>
-					</a>
-					<a href="">
-						<div class="header-menu-item">
-							<div><span>{{lang_dict.header_menu.spares}}</span></div>
-						</div>
-					</a>
-					<a href="">
-						<div class="header-menu-item">
-							<div><span>{{lang_dict.header_menu.about_us}}</span></div>
-						</div>
-					</a>
-				</div>
-				<div class="header-other">
-					<div class="header-other-logo">
-						<!--<img src="{% static 'site_images\toyota-logo-1989-2560x1440-1024x560 (1).png' %}">-->
-					</div>
-					<div class="header-other-lang">
-						<span>{{ lang }}</span>
-					</div>
-				</div>
-			</div>
-		</header>
-	</div>
+	
 	<section class="section_1">
 		<div class="slider">
 		    <div class="slider__wrapper">
 		      <div class="slider__items">
-
 		        <div class="slider__item item-1">
 		          	<div class="background-image background_section_1 slide_1 w2560_h1080" style="background-image: url('/media/images/slider/camry_1.jpg');"></div>
-		          	<div class="slider-content">
-		          		<div class="slider-description"></div>
-		          	</div>
 		        </div>
 		        <div class="slider__item item-2">
 		          <div class="background-image background_section_1 slide_2 w2560_h1080" style="background-image: url('/media/images/slider/wrench_1920_1080.jpg');"></div>
 		        </div>
-
 		      </div>
 		    </div>
 		</div>
+		<div class="main">
+			<div class="header-conteiner">
+				<header>
+					<div class="header-top">
+						<div class="header-logo">
+							<!--<img src="{% static 'site_images\toyota-logo-1989-2560x1440-1024x560 (1).png' %}">-->
+						</div>
+						<div class="header-address">
+							<div class="header-address-content">
+								<div class="header-address-top"><span>{{lang_dict.header_menu.city}}</span></div>
+								<div class="header-address-bottom"><span>{{lang_dict.header_menu.address}}</span></div>
+							</div>
+						</div>
+						<div class="header-tel">
+							<div class="header-sales">
+								<div class="header-sales-content">
+									<div class="header-sales-top"><span>{{lang_dict.header_menu.sales_department}}</span></div>
+									<div class="header-sales-bottom"><span>{{lang_dict.header_menu.tel_sales_department}}</span></div>
+								</div>
+							</div>
+							<div class="header-maintenance">
+								<div class="header-maintenance-content">
+									<div class="header-maintenance-top"><span>{{lang_dict.header_menu.maintenance_department}}</span></div>
+									<div class="header-maintenance-top"><span>{{lang_dict.header_menu.tel_maintenance_department}}</span></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="header-bottom">
+						<div class="header-menu-modile">
+							<div class="title-menu-modile">
+								<a href="" onclick="return false;"><div onclick="show_menu_modile(this)">
+									<span>Меню</span>
+								</div></a>
+							</div>
+						</div>
+						<div class="header-menu">
+							<a href="">
+								<div class="header-menu-item">
+									<div><span>{{lang_dict.header_menu.cars}}</span></div>
+								</div>
+							</a>
+							<a href="">
+								<div class="header-menu-item">
+									<div><span>{{lang_dict.header_menu.maintenance}}</span></div>
+								</div>
+							</a>
+							<a href="">
+								<div class="header-menu-item">
+									<div><span>{{lang_dict.header_menu.service}}</span></div>
+								</div>
+							</a>
+							<a href="">
+								<div class="header-menu-item">
+									<div><span></span>{{lang_dict.header_menu.promotions_news}}</div>
+								</div>
+							</a>
+							<a href="">
+								<div class="header-menu-item">
+									<div><span>{{lang_dict.header_menu.accessories}}</span></div>
+								</div>
+							</a>
+							<a href="">
+								<div class="header-menu-item">
+									<div><span>{{lang_dict.header_menu.spares}}</span></div>
+								</div>
+							</a>
+							<a href="">
+								<div class="header-menu-item">
+									<div><span>{{lang_dict.header_menu.about_us}}</span></div>
+								</div>
+							</a>
+						</div>
+						<div class="header-other">
+							<div class="header-other-logo">
+								<!--<img src="{% static 'site_images\toyota-logo-1989-2560x1440-1024x560 (1).png' %}">-->
+							</div>
+							<div class="header-other-lang">
+								<span>{{ lang }}</span>
+							</div>
+						</div>
+					</div>
+				</header>
+			</div>
+			<div class="slider-content">
+				<div class="slider-description"></div>
+			</div>			
+		</div>
+
+
 	</section>
 
 
