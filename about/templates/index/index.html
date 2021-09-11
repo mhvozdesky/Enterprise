@@ -5,8 +5,9 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Enterprise | Your new car</title>
-	<link rel="stylesheet" href="{% static 'css\index\styles_s1.css' %}">
+	<link rel="stylesheet" href="{% static 'css\index\styles_s1.css' %}"> <!-- стили хедера -->
 	<link rel="stylesheet" href="{% static 'css\index\slider.css' %}">
+	<link rel="stylesheet" href="{% static 'css\index\app.css' %}">
 	<style type="text/css">
 		.header-sales-content, .header-maintenance-content{
 			background-image: url("{% static 'site_images\трубка.png' %}");
@@ -101,9 +102,34 @@
 				</div>
 			</div>
 		</header>
+	</div>
+	<section class="section_1">
+		<div class="slider">
+		    <div class="slider__wrapper">
+		      <div class="slider__items">
+
+		        <div class="slider__item item-1">
+		          	<div class="background-image background_section_1 slide_1 w2560_h1080" style="background-image: url('/media/images/slider/camry_1.jpg');"></div>
+		          	<div class="slider-content">
+		          		<div class="slider-description"></div>
+		          	</div>
+		        </div>
+		        <div class="slider__item item-2">
+		          <div class="background-image background_section_1 slide_2 w2560_h1080" style="background-image: url('/media/images/slider/wrench_1920_1080.jpg');"></div>
+		        </div>
+
+		      </div>
+		    </div>
 		</div>
+	</section>
 
 
 	<script src="{% static 'js\index\app.js' %}"></script>
+	<script src="{% static 'js\index\slider_old.js' %}"></script>
+	  <script>
+	    slideShow('.slider', {
+	      isAutoplay: false
+	    });
+	 </script>	
 </body>
 </html>

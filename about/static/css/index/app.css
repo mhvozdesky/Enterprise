@@ -1,0 +1,53 @@
+html, body{
+	margin: 0;
+	font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+	max-width: 100%;
+	height: 100%;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+section{
+	width: 100%;
+	height: 100%;
+}
+
+.slider,
+.slider__wrapper,
+.slider__items,
+.slider__item,
+.background_section_1{
+	width: 100%;
+	height: 100%;
+}
+
+.background_section_1{
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.slider__item{
+	position: relative;
+
+}
+
+.slider-content{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+}
+
+.slider-description{
+	width: 100%;
+	height: 500px;
+}
+
+
