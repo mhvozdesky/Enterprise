@@ -1,7 +1,7 @@
 .header-conteiner{
-/*	position: absolute;
+	position: absolute;
 	top: 0;
-	left: 0;*/
+	left: 0;
 
 	max-width: 100vw;
 	width: 100%;
@@ -481,6 +481,8 @@
 		font-size: 14px;
 	}
 }
+
+тест
 
 
 
