@@ -36,6 +36,15 @@ section{
 
 }
 
+.substrate{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #0000007d;
+}
+
 .slider-content{
 	width: 100%;
 	height: 100%;
@@ -43,12 +52,126 @@ section{
 	top: 0;
 	left: 0;
 	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	font-family: "Source Sans Pro";
 }
 
 .slider-description{
 	width: 100%;
-	height: 500px;
+	padding: 0 0 0 15%;
+	color: white;
+	display: flex;
+    flex-direction: column;
 }
-тест
+
+@media (max-width: 1299px){
+	.slider-description{
+		padding: 0 0 0 8%;
+	}
+}
+
+@media (max-width: 889px){
+	.slider-description{
+		padding: 0 0 0 2%;
+	}
+}
+
+@media (max-width: 409px){
+	.slider-description{
+		padding: 0 0 0 8px;
+	}
+}
+
+.slider-description-title,
+.slider-description-text{
+	display: inline-block;
+}
+
+.title-text{
+	/*font-size: 55px;*/
+	font-size: calc(20px + 35 * ((100vw - 320px)/ 1903));
+	font-weight: 900;
+}
+
+@media (max-width: 767px){
+	.title-text{
+		font-size: calc(20px + (35 + 35 * 0.7) * ((100vw - 320px)/ 1903));
+	}
+}
+
+.text-description{
+	/*font-size: 43px;*/
+	font-size: calc(20px + 24 * ((100vw - 320px)/ 1903));
+	font-style: italic;
+}
+
+@media (max-width: 767px){
+	.text-description{
+		font-size: calc(20px + (24 + 24 * 0.7) * ((100vw - 320px)/ 1903));
+	}
+}
+
+.title-text,
+.text-description{
+	padding: 15px;
+	display: inline-block;
+}
+
+@media (max-width: 889px){
+	.title-text,
+	.text-description{
+		padding: 10px;
+	}
+}
+
+@media (max-width: 639px){
+	.title-text,
+	.text-description{
+		padding: 5px;
+	}
+}
+
+.slider-description-button{
+	margin: 53px 0 0 0;
+}
+
+@media (max-width: 1500px){
+	.slider-description-button{
+		margin: 18px 0 0 0;
+	}
+}
+
+.slider-description-button .button{
+	width: fit-content;
+    padding: 15px;
+    background-color: #9c1118;
+    border-radius: 10px;
+    text-align: center;
+    /*font-size: 35px;*/
+    font-size: calc(20px + 19 * ((100vw - 320px)/ 1903));
+}
+
+@media (max-width: 889px){
+	.slider-description-button .button{
+		padding: 10px;
+	}
+}
+
+
+
+@media (max-width: 767px){
+	.slider-description-button .button{
+		font-size: calc(20px + (19 + 19 * 0.7) * ((100vw - 320px)/ 1903));
+	}
+}
+
+@media (max-width: 639px){
+	.slider-description-button .button{
+		padding: 5px;
+	}
+}
+
+
 
 
