@@ -1,5 +1,5 @@
 (function(){  // анонимная функция (function(){ })(), чтобы переменные "a" и "b" не стали глобальными
-var a = document.querySelector('#nav'), b = null;  // селектор блока, который нужно закрепить
+var a = document.querySelector('.header-bottom'), b = null;  // селектор блока, который нужно закрепить
 window.addEventListener('scroll', Ascroll, false);
 document.body.addEventListener('scroll', Ascroll, false);  // если у html и body высота равна 100%
 function Ascroll() {
