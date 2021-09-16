@@ -41,13 +41,13 @@ function pos_slider_description(){
 }
 
 function pos_nav(){
-	var nav = document.querySelector('.header-bottom');
-	nav.style.transform = "translate(0px, 0px)"; // в исходное положение
-	var nav_top = nav.getBoundingClientRect().top;
+	// var nav = document.querySelector('.header-bottom');
+	// nav.style.transform = "translate(0px, 0px)"; // в исходное положение
+	// var nav_top = nav.getBoundingClientRect().top;
 
-	if (nav_top < 0){
-		nav.style.transform = "translate(0px, " + String((nav_top * -1)) + "px)";
-	}
+	// if (nav_top < 0){
+	// 	nav.style.transform = "translate(0px, " + String((nav_top * -1)) + "px)";
+	// }
 
 	// if (nav.getBoundingClientRect().top <= 0) { // elem.getBoundingClientRect() возвращает в px координаты элемента относительно верхнего левого угла области просмотра окна браузера
 	//    nav.classList.toggle("sticky");

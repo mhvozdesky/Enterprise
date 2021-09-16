@@ -22,10 +22,13 @@ function Ascroll() {
     a.style.padding = '0';
     a.style.border = '0';  // если элементу присвоен padding или border
   }
+  var menu = document.querySelector('.header-menu');
   if (a.getBoundingClientRect().top <= 0) { // elem.getBoundingClientRect() возвращает в px координаты элемента относительно верхнего левого угла области просмотра окна браузера
     b.className = 'sticky';
+    menu.classList.add('sticky-2');
   } else {
     b.className = '';
+    menu.classList.remove('sticky-2');
   }
   window.addEventListener('resize', function() {
     a.children[0].style.width = getComputedStyle(a, '').width;

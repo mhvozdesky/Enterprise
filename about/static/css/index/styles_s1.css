@@ -79,7 +79,7 @@
 
 .header-bottom{
 	display: flex;
-	background-color: #ffffff99;
+	/*background-color: #ffffff99;*/
 	height: 50px;
 }
 
@@ -368,7 +368,7 @@
 		box-shadow: 0 0 10px rgb(0 0 0 / 50%);
 	}
 
-	.header-bottom{
+	.header-bottom-conteiner{
 		height: 37px;
 		justify-content: space-between;
 	}
@@ -389,9 +389,6 @@
 		border-radius: 10px;
 	}
 
-	
-
-
 	.header-menu{
 		overflow: hidden;
 		width: 0px;
@@ -408,10 +405,13 @@
 		transition: ease-out 0.1s;
 	}
 
-	
 
 	.header-other-logo{
 		max-width: 50px;
+	}
+
+	.sticky-2{
+		top: 50px;
 	}
 
 }
@@ -482,7 +482,15 @@
 	}
 }
 
-тест
+.header-bottom-conteiner{
+	display: flex;
+	height: 100%;
+	background-color: #ffffff99;
+}
+
+.header-bottom{
+	display: block;
+}
 
 
 
