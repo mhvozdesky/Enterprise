@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import MainSlider, Automobiles, News, Promotion, Languages, Title, News_description, Automobiles_description, Promotion_description
+from .models import MainSlider, Automobiles, News, Promotion, Languages, Title, News_description, Automobiles_description, Promotion_description, MainSliderNew, MainSlider_description_New
 
 class TitleInline(admin.TabularInline):
     model = News_description
@@ -23,10 +23,22 @@ class Promotion_descriptionInline(admin.TabularInline):
 class PromotionAdmin(admin.ModelAdmin):
     inlines = [
         Promotion_descriptionInline,
-    ]     
+    ] 
+    
+class MainSlider_description_NewInline(admin.TabularInline):
+    model = MainSlider_description_New
+    
+class MainSliderNewAdmin(admin.ModelAdmin):
+    inlines = [
+        MainSlider_description_NewInline,
+    ]  
+    
+
+    
     
 
 admin.site.register(MainSlider)
+admin.site.register(MainSliderNew, MainSliderNewAdmin) 
 admin.site.register(Automobiles, AutomobilesAdmin)
 admin.site.register(News, NewsAdmin)
 #admin.site.register(News)
@@ -36,6 +48,7 @@ admin.site.register(Languages)
 #admin.site.register(News_description)
 #admin.site.register(Automobiles_description)
 #admin.site.register(Promotion_description)
+
 
 
 

@@ -66,7 +66,30 @@ class MainSlider(models.Model):
     
 
     class Meta:
-        verbose_name_plural = "Слайдер на главной странице"
+        verbose_name_plural = "Слайдер на главной странице старый"
+        
+class MainSliderNew(models.Model):
+    #the model presents the main slider
+    
+    slide_number = models.IntegerField()
+    picture = models.ImageField('picture_1920x1080', upload_to='images/slider', blank=True)
+    
+    class Meta:
+        verbose_name_plural = "Слайдер на главной странице"    
+
+class MainSlider_description_New(models.Model):
+    
+    Slider = models.ForeignKey(MainSliderNew, on_delete = models.CASCADE)
+    title = models.CharField(default='', max_length=138)
+    language = models.ForeignKey(Languages, on_delete = models.CASCADE)
+    short_description = models.CharField(default='', max_length=138)
+    text_button = models.CharField(default='', max_length=138)
+    
+    class Meta:
+        verbose_name_plural = "MainSlider_description" 
+        unique_together = ('Slider', 'language',) 
+ 
+
  
     
 class Automobiles(models.Model):
