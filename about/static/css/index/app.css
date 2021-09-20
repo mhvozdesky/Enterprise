@@ -16,6 +16,11 @@ section{
 	height: 100%;
 }
 
+.wrapper{
+	width: 100%;
+	height: 100%;
+}
+
 .slider,
 .slider__wrapper,
 .slider__items,
@@ -184,6 +189,11 @@ section{
 .sticky  {
 	position: fixed;
 	top: 0px;
+}
+
+.wrapper{
+	display: flex;
+	flex-direction: column;
 }
 
 
