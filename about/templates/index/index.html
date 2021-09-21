@@ -151,7 +151,25 @@
 				</div>
 				<div class="text-underline"></div>
 			</div>
-			<div class="section-conteiner"></div>
+			<div class="section-conteiner">
+				<div class="list-auto">
+					{% for automobile in list_automobiles %}
+				   	   <div class="auto-item">
+					   		<a href="#">
+						   		<div class="auto-img" style='background-image: url("{{ automobile.url_auto.url }}");'></div>
+						   		<div class="auto-name"><strong>{{ automobile.title_auto }}</strong> 
+							   		{% if automobile.availability_hybrid %}
+							   			<span class="hybrid">{{lang_dict.hybrid}}</span>
+							   		{% endif %}
+						   		</div>
+						   		<div class="auto-price">{{lang_dict.price}}<span class="price">{{lang_dict.price_from}}{{ automobile.price_starts }}</span> грн</div>
+						   		<div class="auto-line"></div>
+						   		<div class="auto-detail">{{lang_dict.more_detail}}</div>
+						   	</a>
+				   		</div>
+				   {% endfor %} 
+				</div>
+			</div>
 		</div>
 		
 	</section>
