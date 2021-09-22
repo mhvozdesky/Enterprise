@@ -60,7 +60,8 @@ function pos_nav(){
 function adapt_place_for_nav(){
 	height_header_bottom_conteiner = document.querySelector('.header-bottom-conteiner').offsetHeight;
 	empty_for_nav = document.querySelector('.empty-for-nav');
-	empty_for_nav.style.height = String(height_header_bottom_conteiner) + "px"
+	empty_for_nav.style.height = String(height_header_bottom_conteiner) + "px";
+	empty_for_nav.style.minHeight = String(height_header_bottom_conteiner) + "px";
 
 
 	
