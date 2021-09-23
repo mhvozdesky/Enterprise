@@ -474,6 +474,14 @@ span.price{
     padding: 0 20px 0 20px;
 }
 
+
+
+@media (min-height: 989px) and (min-width: 890px) and (max-width: 1399px) {
+	.wrapper-servic{
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
 @media (max-width:1400px){
 	.wrapper-servic{
 		width: 1265px;
@@ -482,12 +490,28 @@ span.price{
 	}
 }
 
-@media (max-width:889px){
+@media (max-width: 889px){
 	.wrapper-servic{
-	grid-template-columns: repeat(2, 1fr);
-	width: 670px;
-	grid-column-gap: 6%;
-	grid-row-gap: 26px;
+		grid-template-columns: repeat(2, 1fr);
+		width: 670px;
+		grid-column-gap: 6%;
+		grid-row-gap: 26px;
+	}
+}
+
+@media (min-height: 882px) and (max-width: 889px) {
+	.wrapper-servic{
+		width: 769px;
+		grid-column-gap: 9%;
+		grid-row-gap: 84px;
+	}
+}
+
+@media (min-height: 576px) and (max-width: 889px) {
+	.wrapper-servic{
+		width: 555px;
+		grid-column-gap: 5%;
+		grid-row-gap: 75px;
 	}
 }
 
@@ -536,6 +560,12 @@ span.price{
 @media (max-width: 1400px){
 	.services-item-height{
 		padding: 31% 0 0 0;
+	}
+}
+
+@media (min-height: 576px) and (max-width: 889px) {
+	.services-item-height{
+		padding: 46% 0 0 0;
 	}
 }
 
@@ -588,6 +618,12 @@ span.price{
 	}
 }
 
+@media (min-height: 576px) and (max-width: 889px){
+	.cervice-content{
+	font-size: 20px;
+	}
+}
+
 @media (max-width: 575px){
 	.cervice-content{
 		font-size: 19px;
@@ -621,6 +657,3 @@ span.price{
     align-self: center;
     padding: 0 0 0 8%;
 }
-
-
-
