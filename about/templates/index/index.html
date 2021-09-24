@@ -256,6 +256,79 @@
 			</div>
 		</div>
 	</section>
+	<section class="section_4">
+		<div class="wrapper">
+			<div class="empty-for-nav"></div>
+			<div class="title-section">
+				<div class="text-title-section">
+					<span>{{lang_dict.promotions_news}}</span>
+				</div>
+				<div class="text-underline"></div>
+			</div>
+			<div class="section-conteiner section-conteiner-section_4">
+				<div class="block-promotions_news">
+					<div class="block-item block-news">
+						<div class="block--img block--img=-news" style='background-image: url("{{ last_news.picture_563_266.url }}");'></div>
+						<div class="block--content block--content-news">
+							<div class="title-block title-news">{{ title_news }}</div>
+							<div class="text-block text-news">{{shot_description_news|safe}}</div>
+							<div class="more-block more-block-news"><a href="#">{{lang_dict.read_more}}</a></div>
+						</div>
+					</div>
+					<div class="block-item block-promotions">
+						<div class="block--img block--img=-promotions" style='background-image: url("{{ last_promotion.picture_563_266.url }}");'></div>
+						<div class="block--content block--content-promotions">
+							<div class="title-block title-promotions">{{ title_promotion }}</div>
+							<div class="text-block text-promotions">{{shot_description_promotion|safe}}</div>
+							<div class="more-block more-block-promotions"><a href="#">{{lang_dict.read_more}}</a></div>
+						</div>
+					</div>
+				</div>
+				<div class="buttons-promotions_news">
+					<div class="buttons-list">
+						<div class="button button-promotions">
+							<div class="text-buttom-m1 promotions">
+								<div class="text-buttom">
+									<div>
+										<span>{{lang_dict.button_promotions}}</span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="button button-news">
+							<div class="text-buttom-m1 news">
+								<div class="text-buttom">
+									<div>
+										<span>{{lang_dict.button_news}}</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="subscription-block">
+					<div class="subscription-block-conteiner">
+						<div class="text-conteiner subscription-item item-1">
+							<div class="text-block">
+								<div class="text-conteiner-question">{{lang_dict.list_subscribe.text}}</div>
+								<div class="text-conteiner-call">{{lang_dict.list_subscribe.call_action}}</div>
+							</div>
+						</div>
+						<div class="mail-conteiner subscription-item item-2">
+							<input type="text" id="email_fild" name="email_fild" placeholder="E-mail">
+						</div>
+						<div class="button-conteiner subscription-item item-3">
+							<div class="button-text">
+								<div class="button-text-p1">
+									<div>{{lang_dict.button_send}}</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
 	<script src="{% static 'js\index\app.js' %}"></script>
 	<script src="{% static 'js\index\slider_old.js' %}"></script>

@@ -657,3 +657,179 @@ span.price{
     align-self: center;
     padding: 0 0 0 8%;
 }
+
+.section-conteiner-section_4{
+	justify-content: start;
+	align-items: baseline;
+	flex-direction: column;
+}
+
+.block-promotions_news{
+	flex: 1 1 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 1600px;
+    align-self: center;
+}
+
+.block-item{
+	display: flex;
+	padding: 20px;
+}
+
+.block--img{
+	width: 28%;
+	min-width: 28%;
+	padding: 13% 0 0 0;
+	background-size: 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	box-shadow: -4px 4px 10px hsl(0deg 0% 0% / 60%);
+}
+
+.block--content{
+	margin: 0 0 0 3%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.title-block{
+	font-size: 38px;
+	font-weight: 900;
+}
+
+.text-block{
+	font-size: 31px;
+	font-weight: lighter;
+}
+
+.more-block{
+	text-decoration: none;
+	font-size: 29px;
+	font-style: italic;
+	color: black;
+}
+
+.buttons-promotions_news{
+	width: 100%;
+	margin: 0 0 10px 0;
+}
+
+.buttons-list{
+	display: flex;
+}
+
+.button{
+	flex: 1 1 22%;
+	margin: 0 100px 0 100px;
+}
+
+.text-buttom-m1{
+	display: flex;
+}
+
+.text-buttom-m1.promotions{
+	justify-content: end;
+}
+
+.text-buttom{
+	width: 34%;
+	padding: 7% 0 0 0;
+	position: relative;
+	background-color: #a80014;
+	box-shadow: -2px 4px 10px hsl(0deg 0% 0% / 60%);
+	border-radius: 10px;
+}
+
+.text-buttom div{
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	font-size: 41px;
+	color: white;
+}
+
+.subscription-block{
+	width: 100%;
+	margin: 50px 0 0 0;
+	background-color: #000000bf;
+	padding: 6.5% 0 0 0;
+	position: relative;
+}
+
+.subscription-block-conteiner{
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	width: 100%;
+	height: 100%;
+}
+
+.item-1{
+	flex: 1 1 42%;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: end;
+	font-style: italic;
+	font-weight: lighter;
+	padding: 0 2% 0 0;
+}
+
+.item-2{
+	flex: 1 1 34%;
+}
+
+.item-3{
+	flex: 1 1 25%;
+	color: white;
+}
+
+.mail-conteiner{
+	display: flex;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+}
+
+#email_fild{
+	width: 80%;
+	height: 46%;
+	border-radius: 15px;
+	font-size: 25px;
+	text-indent: 40px;
+}
+
+.button-conteiner{
+	display: flex;
+	align-items: center;
+	width: 100%;
+}
+
+.button-text{
+	position: relative;
+	width: 46%;
+	padding: 11% 0 0 0;
+	background-color: #b30015;
+	border-radius: 15px;
+}
+
+.button-text-p1{
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100%;
+	font-size: 32px;
+}
