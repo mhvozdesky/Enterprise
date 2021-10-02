@@ -1115,3 +1115,15 @@ span.price{
 	font-size: 14px;
 	}
 }
+
+.section-conteiner-item{
+	width: 50%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.section-5 .title-block{
+	text-align: center;
+}
