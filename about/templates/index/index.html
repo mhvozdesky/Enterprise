@@ -329,7 +329,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="section-5">
+	<section class="section_5" style="background-image: url('{% static 'site_images/фон контакти 1.jpg' %}');">
 		<div class="wrapper">
 			<div class="empty-for-nav"></div>
 			<div class="section-conteiner">
@@ -338,21 +338,27 @@
 					<div class="content-block">
 						<div class="content-block-conteiner">
 							<div class="content-block-conteiner-item sales-department-block">
-								<div class="img img-tel"></div>
+								<div class="content-block-conteiner-item-1">
+									<div class="img img-tel" style="background-image: url('{% static 'site_images\phone.png' %}');"></div>
+								</div>
 								<div class="text-block">
 									<div class="text">{{lang_dict.contacts.sales_department}}</div>
 									<div class="text-cont">{{lang_dict.contacts.tel_sales_department}}</div>
 								</div>
 							</div>
 							<div class="content-block-conteiner-item service-department-block">
-								<div class="img img-tel"></div>
+								<div class="content-block-conteiner-item-1">
+									<div class="img img-tel" style="background-image: url('{% static 'site_images\phone.png' %}');"></div>
+								</div>
 								<div class="text-block">
 									<div class="text">{{lang_dict.contacts.maintenance_department}}</div>
 									<div class="text-cont">{{lang_dict.contacts.tel_maintenance_department}}</div>
 								</div>
 							</div>
 							<div class="content-block-conteiner-item mail-block">
-								<div class="img img-mail"></div>
+								<div class="content-block-conteiner-item-1">
+									<div class="img img-mail" style="background-image: url('{% static 'site_images\mail.png' %}');"></div>
+								</div>
 								<div class="text-block">
 									<div class="text">{{lang_dict.contacts.e_mail}}</div>
 									<div class="text-cont">test@enterprice.com</div>
@@ -363,16 +369,24 @@
 					<div class="block-social">
 						<div class="block-social-title">{{lang_dict.we_in_social}}</div>
 						<div class="block-social-conteiner">
-							<div class="social-item telegram"></div>
-							<div class="social-item instagram"></div>
-							<div class="social-item facebook"></div>
-							<div class="social-item youtube"></div>
+							<div class="block-social-conteiner-1">
+								<div class="social-item telegram" style='background-image: url("{% static "site_images/1200px-Telegram_2019_Logo.svg.png" %}");'></div>
+							</div>
+							<div class="block-social-conteiner-1">
+								<div class="social-item instagram" style='background-image: url("{% static "site_images/a25f4f58938bbe61357ebca42d23866f.png" %}");'></div>
+							</div>
+							<div class="block-social-conteiner-1">
+								<div class="social-item facebook" style='background-image: url("{% static "site_images/facebook_logos_PNG19751.png" %}");'></div>
+							</div>
+							<div class="block-social-conteiner-1">
+								<div class="social-item youtube" style='background-image: url("{% static "site_images/YouTube-Emblem.png" %}");'></div>
+							</div>
 						</div>
 					</div>
 				</div>
 				<div class="section-conteiner-item block-map">
 					<div class="title-block">{{lang_dict.on_map}}</div>
-					<div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2542.997703316464!2d30.681900815894856!3d50.403880398600236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c48cfe1a8f77%3A0x7898d6fff0cddc40!2sBoryspilska!5e0!3m2!1sru!2sua!4v1598702862396!5m2!1sru!2sua" width="87.582%" height="78.9177%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></div>
+					<div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2542.997703316464!2d30.681900815894856!3d50.403880398600236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c48cfe1a8f77%3A0x7898d6fff0cddc40!2sBoryspilska!5e0!3m2!1sru!2sua!4v1598702862396!5m2!1sru!2sua" width="800px" height="500px" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></div>
 				</div>
 			</div>
 		</div>
