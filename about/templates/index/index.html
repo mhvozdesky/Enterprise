@@ -391,6 +391,102 @@
 			</div>
 		</div>
 	</section>
+	<section class="section_6" style="background-image: url('{% static 'site_images/section.jpg' %}');">
+		<div class="empty-for-nav"></div>
+		<div class="section-conteiner">
+			<div class="footer-content">
+				<div class="footer-block">
+					<div class="footer-block-content">
+						<div class="footer-block-title">
+							<div class="title-text">{{lang_dict.footer.lineup}}</div>
+						</div>
+						<div class="footer-block-list">
+							{% for automobile in list_automobiles %}
+								<div class="footer-item">
+									<a href="#"><div class="item-text">{{ automobile.title_auto }}</div></a>
+								</div>
+							{% endfor %}
+						</div>
+					</div>
+				</div>
+				<div class="footer-block">
+					<div class="footer-block-content">
+						<div class="footer-block-title">
+							<div class="title-text">{{lang_dict.footer.maintenance}}</div>
+						</div>
+						<div class="footer-block-list">
+							<div class="footer-item">
+								<a href="#"><div class="item-text">{{lang_dict.footer.list_maintenance.maintenance}}</div></a>
+							</div>
+							<div class="footer-item">
+								<a href="#"><div class="item-text">{{lang_dict.footer.list_maintenance.tire_fitting}}</div></a>
+							</div>
+							<div class="footer-item">
+								<a href="#"><div class="item-text">{{lang_dict.footer.list_maintenance.body_repair}}</div></a>
+							</div>
+							<div class="footer-item">
+								<a href="#"><div class="item-text">{{lang_dict.footer.list_maintenance.diagnostics}}</div></a>
+							</div>
+							<div class="footer-item">
+								<a href="#"><div class="item-text">{{lang_dict.footer.list_maintenance.carwash}}</div></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer-block">
+					<div class="footer-block-content">
+						<div class="footer-block-title">
+							<div class="title-text">{{lang_dict.footer.feedback}}</div>
+						</div>
+						<div class="footer-block-list">
+							<div class="footer-item">
+								<a href="#"><div class="item-text">{{lang_dict.footer.list_feedback.test_drive}}</div></a>
+							</div>
+							<div class="footer-item">
+								<a href="#"><div class="item-text">{{lang_dict.footer.list_feedback.get_consultation}}</div></a>
+							</div>
+							<div class="footer-item">
+								<a href="#"><div class="item-text">{{lang_dict.footer.list_feedback.order_car}}</div></a>
+							</div>
+							<div class="footer-item">
+								<a href="#"><div class="item-text">{{lang_dict.footer.list_feedback.want_maintenance}}</div></a>
+							</div>
+							<div class="footer-item">
+								<a href="#"><div class="item-text">{{lang_dict.footer.list_feedback.want_call}}</div></a>
+							</div>
+							<div class="footer-item">
+								<a href="#"><div class="item-text">{{lang_dict.footer.list_feedback.subscribe_news}}</div></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="footer-block">
+					<div class="footer-block-content">
+						<div class="footer-block-title">
+							<div class="title-text">{{lang_dict.footer.list_common_information.common_information}}</div>
+						</div>
+						<div class="footer-block-list">
+							<div class="footer-item">
+								<a href="#"><div class="item-text">{{lang_dict.footer.list_common_information.info_corporate}}</div></a>
+							</div>
+							<div class="footer-item">
+								<a href="#"><div class="item-text">{{lang_dict.footer.list_common_information.promotions_news}}</div></a>
+							</div>
+							<div class="footer-item">
+								<a href="#"><div class="item-text">{{lang_dict.footer.list_common_information.about_us}}</div></a>
+							</div>
+							<div class="footer-item">
+								<a href="#"><div class="item-text">{{lang_dict.footer.list_common_information.contacts}}</div></a>
+							</div>
+							<div class="footer-item">
+								<a href="#"><div class="item-text">{{lang_dict.footer.list_common_information.vacancy}}</div></a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
 	<script src="{% static 'js\index\app.js' %}"></script>
 	<script src="{% static 'js\index\slider_old.js' %}"></script>
