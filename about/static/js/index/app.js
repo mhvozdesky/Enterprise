@@ -71,7 +71,7 @@ function adapt_place_for_nav(){
 }
 
 function bubu(){
-	console.log('hellos');
+	
 
 		var a = document.querySelector('.header-bottom'), b = null;  // селектор блока, который нужно закрепить
 		window.addEventListener('scroll', Ascroll, false);
@@ -113,11 +113,28 @@ function bubu(){
 
 }
 
+function adaptation_section_6(){
+	var section_6 = document.querySelector('.section_6');
+	var section_6_childs = section_6.children;
+	var children_height = 0;
+
+	for (var i = 0; i < section_6_childs.length; i++) {
+		children_height = children_height + section_6_childs[i].offsetHeight;
+	}
+
+	if (section_6.offsetHeight < children_height){
+		section_6.style.height = 'auto';
+	} else{
+		section_6.style.height = '';
+	}
+}
+
 
 
 function resizeListener(){
 	pos_slider_description();
 	adapt_place_for_nav();
+	adaptation_section_6();
 }
 
 document.addEventListener('click', ClickListener);
@@ -127,6 +144,7 @@ window.onload = function() {
   pos_nav();
   adapt_place_for_nav();
   bubu();
+  adaptation_section_6();
 };
 
 
