@@ -55,6 +55,9 @@ function pos_nav(){
 	//    nav.classList.toggle("sticky");
 	//  }
 
+	define_active_section();
+
+
 }
 
 function adapt_place_for_nav(){
@@ -129,12 +132,75 @@ function adaptation_section_6(){
 	}
 }
 
+function navigation_indicator_size(){
+	var item_text = document.querySelector('.side_navigation .item-text');
+	var font_size_text = window.getComputedStyle(item_text, null).getPropertyValue('font-size');
+	var circle = document.querySelectorAll('.side_navigation .circle');
+	//Math.trunc(Number(font_size_text.replace('px', '')))
+
+	for (i=0; i < circle.length; i++){
+		circle[i].style.width = String(Math.trunc(Number(font_size_text.replace('px', ''))) + 'px');
+		circle[i].style.height = String(Math.trunc(Number(font_size_text.replace('px', ''))) + 'px');
+	}
+}
+
+function navigation_indicator_position(){
+	var total_height = document.body.offsetHeight;
+	var side_navigation = document.querySelector('.side_navigation');
+	var height_side_navigation = document.querySelector('.side_navigation').offsetHeight;
+
+	side_navigation.style.top = String((total_height / 2) - (height_side_navigation / 2)) + 'px';
+}
+
+function click_side_navigation(){
+	var side_navigation = document.querySelector('.side_navigation');
+	//это точно добавит и не задвоит класс activ, если он есть, то просто останется
+	side_navigation.classList.remove('activ');
+	side_navigation.classList.add('activ');
+}
+
+function deactivate_side_navigation(){
+	var side_navigation = document.querySelector('.side_navigation');
+	side_navigation.classList.remove('activ');
+}
+
+function define_active_section(){
+	// сравним положение каждой секции. Которая ближе к 0, та и активная
+
+	var section_name = '';
+	var smallest_position = 10000000;
+
+	var list_section = document.querySelectorAll('section');
+	for (var i = 0; i < list_section.length; i++) {
+		var section_position = Math.abs(list_section[i].getBoundingClientRect().top);
+		if (section_position < smallest_position){
+			section_name = list_section[i].id;
+			smallest_position = section_position; 
+		}
+	}
+
+	// на этом этапе мы знаем активную секцию, подсветим нужный индикатор
+	// отключим все индикаторы
+	var indicators = document.querySelectorAll('.circle');
+	for (var i = 0; i < indicators.length; i++) {
+		indicators[i].style.backgroundColor = '';
+	}
+
+	// включим нужный
+	var indicator = document.querySelector('.indicator-' + section_name + ' .circle');
+	indicator.style.backgroundColor = '#ef0023';
+
+}
+
 
 
 function resizeListener(){
 	pos_slider_description();
 	adapt_place_for_nav();
 	adaptation_section_6();
+	navigation_indicator_size();
+	navigation_indicator_position();
+	define_active_section();
 }
 
 document.addEventListener('click', ClickListener);
@@ -145,6 +211,9 @@ window.onload = function() {
   adapt_place_for_nav();
   bubu();
   adaptation_section_6();
+  navigation_indicator_size();
+  navigation_indicator_position();
+  define_active_section();
 };
 
 

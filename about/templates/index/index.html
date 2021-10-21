@@ -105,7 +105,71 @@
 			</div>
 		</header>
 	</div>
-	<section class="section_1">
+	<div class="side_navigation" onclick='click_side_navigation()' onmouseover='click_side_navigation()' onmouseout='deactivate_side_navigation()'>
+		<div class="side_navigation-list">
+			<div class="list-item">
+				<div class="item-indicator-block indicator-section_1">
+					<div class="circle"></div>
+				</div>
+				<a href="#section_1">
+					<div class="item-text-block">
+						<div class="item-text">{{lang_dict.list_nav_section_indicators.menu}}</div>
+					</div>
+				</a>
+			</div>
+			<div class="list-item">
+				<div class="item-indicator-block indicator-section_2">
+					<div class="circle"></div>
+				</div>
+				<a href="#section_2">
+					<div class="item-text-block">
+						<div class="item-text">{{lang_dict.list_nav_section_indicators.lineup}}</div>
+					</div>
+				</a>
+			</div>
+			<div class="list-item">
+				<div class="item-indicator-block indicator-section_3">
+					<div class="circle"></div>
+				</div>
+				<a href="#section_3">
+					<div class="item-text-block">
+						<div class="item-text">{{lang_dict.list_nav_section_indicators.our_services}}</div>
+					</div>
+				</a>
+			</div>
+			<div class="list-item">
+				<div class="item-indicator-block indicator-section_4">
+					<div class="circle"></div>
+				</div>
+				<a href="#section_4">
+					<div class="item-text-block">
+						<div class="item-text">{{lang_dict.list_nav_section_indicators.promotions_news}}</div>
+					</div>
+				</a>
+			</div>
+			<div class="list-item">
+				<div class="item-indicator-block indicator-section_5">
+					<div class="circle"></div>
+				</div>
+				<a href="#section_5">
+					<div class="item-text-block">
+						<div class="item-text">{{lang_dict.list_nav_section_indicators.contacts}}</div>
+					</div>
+				</a>
+			</div>
+			<div class="list-item">
+				<div class="item-indicator-block indicator-section_6">
+					<div class="circle"></div>
+				</div>
+				<a href="#section_6">
+					<div class="item-text-block">
+						<div class="item-text">{{lang_dict.list_nav_section_indicators.menu}}</div>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+	<section class="section_1" id='section_1'>
 		<div class="slider">
 		    <div class="slider__wrapper">
 		      <div class="slider__items">
@@ -142,7 +206,7 @@
 		    </div>
 		</div>
 	</section>
-	<section class="section_2">
+	<section class="section_2" id='section_2'>
 		<div class="wrapper">
 			<div class="empty-for-nav"></div>
 			<div class="title-section">
@@ -174,7 +238,7 @@
 		</div>
 		
 	</section>
-	<section class="section_3">
+	<section class="section_3" id='section_3'>
 		<div class="section-background" style="background-image: url('{% static 'site_images/section3.jpg' %}');"></div>
 		<div class="wrapper wrapper_section_3">
 			<div class="empty-for-nav"></div>
@@ -256,7 +320,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="section_4">
+	<section class="section_4" id='section_4'>
 		<div class="wrapper">
 			<div class="empty-for-nav"></div>
 			<div class="title-section">
@@ -329,7 +393,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="section_5" style="background-image: url('{% static 'site_images/фон контакти 1.jpg' %}');">
+	<section class="section_5" id='section_5' style="background-image: url('{% static 'site_images/фон контакти 1.jpg' %}');">
 		<div class="wrapper">
 			<div class="empty-for-nav"></div>
 			<div class="section-conteiner">
@@ -391,7 +455,7 @@
 			</div>
 		</div>
 	</section>
-	<section class="section_6" style="background-image: url('{% static 'site_images/section.jpg' %}');">
+	<section class="section_6" id='section_6' style="background-image: url('{% static 'site_images/section.jpg' %}');">
 		<div class="empty-for-nav"></div>
 		<div class="section-conteiner">
 			<div class="footer-content">
