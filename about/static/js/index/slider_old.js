@@ -15,7 +15,7 @@ var slideShow = (function () {
       _indicatorIndex = 0,
       _indicatorIndexMax = _sliderItems.length - 1,
       _config = {
-        isAutoplay: false, // автоматическая смена слайдов
+        isAutoplay: true, // автоматическая смена слайдов
         directionAutoplay: 'next', // направление смены слайдов
         delayAutoplay: 5000, // интервал между автоматической сменой слайдов
         isPauseOnHover: true // устанавливать ли паузу при поднесении курсора к слайдеру
