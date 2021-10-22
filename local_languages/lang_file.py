@@ -67,7 +67,7 @@ lang_dict = {
                 'subscribe_news': 'Підписатись на новини',
             },
             'list_common_information': {
-                'common_information': 'Общая информация',
+                'common_information': 'Загальна інформація',
                 'info_corporate': 'Корпоративним клієнтам',
                 'promotions_news': 'Акції та новини',
                 'about_us': 'Про нас',

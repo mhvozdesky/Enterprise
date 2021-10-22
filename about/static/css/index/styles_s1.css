@@ -109,9 +109,10 @@
 .header-other-lang{
 	text-transform: uppercase;
 	width: 110px;
+	position: relative;
 }
 
-.header-other-lang span{
+.header-other-lang div{
 	text-align: center;
 }
 
@@ -492,5 +493,47 @@
 	display: block;
 }
 
+.header-other-lang a{
+	text-decoration: none;
+	color: white;
+}
 
+.conteiner-lang{
+	/* border: solid 1px white; */
+	position: absolute;
+	top: 100%;
+	width: 100%;
+	visibility: hidden;
+}
 
+.header-other-lang:hover .conteiner-lang{
+	visibility: visible;
+}
+
+.list-lang{
+	color: white;
+	background-color: #161616;
+	box-shadow: -4px 2px 10px 1px rgb(251 251 251 / 24%);
+	opacity: 0;
+	height: 0;
+	transition: opacity 300ms, height 300ms;
+}
+
+.header-other-lang:hover .list-lang{
+	opacity: 0.95;
+	height: auto;
+	transition: opacity 300ms, height 300ms;
+}
+
+.lang-label{
+	padding: 5px;
+	opacity: 0;
+}
+
+.header-other-lang:hover .lang-label{
+	opacity: 1;
+}
+
+.lang-label:hover{
+	transform: scale(1.3);
+}
