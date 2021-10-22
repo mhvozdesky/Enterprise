@@ -1556,7 +1556,7 @@ span.price{
 	top: calc(50% - 174px);
 	max-width: 40px;
 	opacity: 0.95;
-	z-index: 99999;
+	z-index: 9999;
 	color: white;
 }
 

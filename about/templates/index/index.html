@@ -101,8 +101,11 @@
 							<div>{{ lang }}
 								<div class="conteiner-lang">
 									<div class="list-lang">
-										<a href="#"><div class="lang-label">UK</div></a>
-										<a href="#"><div class="lang-label">RU</div></a>
+										{% if lang == 'ru' %}
+											<a href="{{ path_other_lang }}"><div class="lang-label">UK</div></a>
+										{% else %}
+											<a href="{{ path_other_lang }}"><div class="lang-label">RU</div></a>
+										{% endif %}
 									</div>
 								</div>
 							</div>
@@ -170,7 +173,7 @@
 				</div>
 				<a href="#section_6">
 					<div class="item-text-block">
-						<div class="item-text">{{lang_dict.list_nav_section_indicators.menu}}</div>
+						<div class="item-text">{{lang_dict.list_nav_section_indicators.footer}}</div>
 					</div>
 				</a>
 			</div>
