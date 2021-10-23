@@ -23,7 +23,7 @@ def get_info_slider(QuerySet_slides_new, lang_id):
         
     return list_info_slider
 
-def index(request):
+def get_lang_info(request):
     if len(re.findall(r'^/ru/', request.path)) > 0:
         lang = 'ru'#
         path_other_lang = request.path[3:] #switch to Ukrainian
@@ -32,6 +32,15 @@ def index(request):
         lang = 'uk'
         path_other_lang = r'/ru' + request.path #switch to Russian
         lang_id = 3
+        
+    return [lang, path_other_lang, lang_id]    
+
+def index(request):
+    
+    lang_info = get_lang_info(request)
+    lang = lang_info[0]
+    path_other_lang = lang_info[1]
+    lang_id = lang_info[2]   
     
     
     lang_dict = lang_file.lang_dict[lang_id]
