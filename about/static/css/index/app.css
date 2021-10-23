@@ -1604,3 +1604,7 @@ span.price{
 .side_navigation .item-text{
 	white-space: nowrap;
 }
+
+.test{
+	background-color: red;
+}

@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="{{ lang }}">
+<head>
+	{% load static %}
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	{% block title %}<title>Enterprise | Your new car</title>{% endblock %}
+	{% block style_link %}
+	<link rel="stylesheet" href="{% static 'css\index\styles_s1.css' %}"> <!-- стили хедера -->
+	<link rel="stylesheet" href="{% static 'css\index\slider.css' %}">
+	<link rel="stylesheet" href="{% static 'css\index\app.css' %}">
+	{% endblock %}
+	{% block style %}
+	<style type="text/css">
+		.header-sales-content, .header-maintenance-content{
+			background-image: url("{% static 'site_images\трубка.png' %}");
+		}
+
+		.header-logo, .header-other-logo{
+			background-image: url("{% static 'site_images\toyota-logo-1989-2560x1440-1024x560 (1).png' %}");
+		}
+
+	</style>
+	{% endblock %}
+</head>
+<body>
+{% block body %}
+	{% block header %}
+	<div class="header-conteiner">
+		<header>
+			<div class="header-top">
+				<div class="header-logo">
+					<!--<img src="{% static 'site_images\toyota-logo-1989-2560x1440-1024x560 (1).png' %}">-->
+				</div>
+				<div class="header-address">
+					<div class="header-address-content">
+						<div class="header-address-top"><span>{{lang_dict.header_menu.city}}</span></div>
+						<div class="header-address-bottom"><span>{{lang_dict.header_menu.address}}</span></div>
+					</div>
+				</div>
+				<div class="header-tel">
+					<div class="header-sales">
+						<div class="header-sales-content">
+							<div class="header-sales-top"><span>{{lang_dict.header_menu.sales_department}}</span></div>
+							<div class="header-sales-bottom"><span>{{lang_dict.header_menu.tel_sales_department}}</span></div>
+						</div>
+					</div>
+					<div class="header-maintenance">
+						<div class="header-maintenance-content">
+							<div class="header-maintenance-top"><span>{{lang_dict.header_menu.maintenance_department}}</span></div>
+							<div class="header-maintenance-top"><span>{{lang_dict.header_menu.tel_maintenance_department}}</span></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="header-bottom">
+				<div class="header-bottom-conteiner">
+					<div class="header-menu-modile">
+						<div class="title-menu-modile">
+							<a href="" onclick="return false;"><div onclick="show_menu_modile(this)">
+								<span>Меню</span>
+							</div></a>
+						</div>
+					</div>
+					<div class="header-menu">
+						<a href="">
+							<div class="header-menu-item">
+								<div><span>{{lang_dict.header_menu.cars}}</span></div>
+							</div>
+						</a>
+						<a href="">
+							<div class="header-menu-item">
+								<div><span>{{lang_dict.header_menu.maintenance}}</span></div>
+							</div>
+						</a>
+						<a href="">
+							<div class="header-menu-item">
+								<div><span>{{lang_dict.header_menu.service}}</span></div>
+							</div>
+						</a>
+						<a href="">
+							<div class="header-menu-item">
+								<div><span></span>{{lang_dict.header_menu.promotions_news}}</div>
+							</div>
+						</a>
+						<a href="">
+							<div class="header-menu-item">
+								<div><span>{{lang_dict.header_menu.accessories}}</span></div>
+							</div>
+						</a>
+						<a href="">
+							<div class="header-menu-item">
+								<div><span>{{lang_dict.header_menu.spares}}</span></div>
+							</div>
+						</a>
+						<a href="">
+							<div class="header-menu-item">
+								<div><span>{{lang_dict.header_menu.about_us}}</span></div>
+							</div>
+						</a>
+					</div>
+					<div class="header-other">
+						<div class="header-other-logo">
+							<!--<img src="{% static 'site_images\toyota-logo-1989-2560x1440-1024x560 (1).png' %}">-->
+						</div>
+						<div class="header-other-lang">
+							<div>{{ lang }}
+								<div class="conteiner-lang">
+									<div class="list-lang">
+										{% if lang == 'ru' %}
+											<a href="{{ path_other_lang }}"><div class="lang-label">UK</div></a>
+										{% else %}
+											<a href="{{ path_other_lang }}"><div class="lang-label">RU</div></a>
+										{% endif %}
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+	</div>
+	{% block side_navigation_home %}
+	{% endblock %}
+	{% block side_navigation_model %}
+	{% endblock %}
+	{% endblock %}
+	{% block main_content %}
+	{% endblock %}
+	{% block footer %}
+	<footer>
+		<section class="section_6" id='section_6' style="background-image: url('{% static 'site_images/section.jpg' %}');">
+			<div class="empty-for-nav"></div>
+			<div class="section-conteiner">
+				<div class="footer-content">
+					<div class="footer-block">
+						<div class="footer-block-content">
+							<div class="footer-block-title">
+								<div class="title-text">{{lang_dict.footer.lineup}}</div>
+							</div>
+							<div class="footer-block-list">
+								{% for automobile in list_automobiles %}
+									<div class="footer-item">
+										<a href="#"><div class="item-text">{{ automobile.title_auto }}</div></a>
+									</div>
+								{% endfor %}
+							</div>
+						</div>
+					</div>
+					<div class="footer-block">
+						<div class="footer-block-content">
+							<div class="footer-block-title">
+								<div class="title-text">{{lang_dict.footer.maintenance}}</div>
+							</div>
+							<div class="footer-block-list">
+								<div class="footer-item">
+									<a href="#"><div class="item-text">{{lang_dict.footer.list_maintenance.maintenance}}</div></a>
+								</div>
+								<div class="footer-item">
+									<a href="#"><div class="item-text">{{lang_dict.footer.list_maintenance.tire_fitting}}</div></a>
+								</div>
+								<div class="footer-item">
+									<a href="#"><div class="item-text">{{lang_dict.footer.list_maintenance.body_repair}}</div></a>
+								</div>
+								<div class="footer-item">
+									<a href="#"><div class="item-text">{{lang_dict.footer.list_maintenance.diagnostics}}</div></a>
+								</div>
+								<div class="footer-item">
+									<a href="#"><div class="item-text">{{lang_dict.footer.list_maintenance.carwash}}</div></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="footer-block">
+						<div class="footer-block-content">
+							<div class="footer-block-title">
+								<div class="title-text">{{lang_dict.footer.feedback}}</div>
+							</div>
+							<div class="footer-block-list">
+								<div class="footer-item">
+									<a href="#"><div class="item-text">{{lang_dict.footer.list_feedback.test_drive}}</div></a>
+								</div>
+								<div class="footer-item">
+									<a href="#"><div class="item-text">{{lang_dict.footer.list_feedback.get_consultation}}</div></a>
+								</div>
+								<div class="footer-item">
+									<a href="#"><div class="item-text">{{lang_dict.footer.list_feedback.order_car}}</div></a>
+								</div>
+								<div class="footer-item">
+									<a href="#"><div class="item-text">{{lang_dict.footer.list_feedback.want_maintenance}}</div></a>
+								</div>
+								<div class="footer-item">
+									<a href="#"><div class="item-text">{{lang_dict.footer.list_feedback.want_call}}</div></a>
+								</div>
+								<div class="footer-item">
+									<a href="#"><div class="item-text">{{lang_dict.footer.list_feedback.subscribe_news}}</div></a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="footer-block">
+						<div class="footer-block-content">
+							<div class="footer-block-title">
+								<div class="title-text">{{lang_dict.footer.list_common_information.common_information}}</div>
+							</div>
+							<div class="footer-block-list">
+								<div class="footer-item">
+									<a href="#"><div class="item-text">{{lang_dict.footer.list_common_information.info_corporate}}</div></a>
+								</div>
+								<div class="footer-item">
+									<a href="#"><div class="item-text">{{lang_dict.footer.list_common_information.promotions_news}}</div></a>
+								</div>
+								<div class="footer-item">
+									<a href="#"><div class="item-text">{{lang_dict.footer.list_common_information.about_us}}</div></a>
+								</div>
+								<div class="footer-item">
+									<a href="#"><div class="item-text">{{lang_dict.footer.list_common_information.contacts}}</div></a>
+								</div>
+								<div class="footer-item">
+									<a href="#"><div class="item-text">{{lang_dict.footer.list_common_information.vacancy}}</div></a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</footer>
+	{% endblock %}
+	{% block script_ex %}
+	<script src="{% static 'js\index\app.js' %}"></script>
+	<script src="{% static 'js\index\slider_old.js' %}"></script>
+	<!--<script src="{% static 'js\index\nav_fixed.js' %}"></script>-->
+	{% endblock %}
+	{% block script_in %}
+	  <script>
+	    slideShow('.slider', {
+	      isAutoplay: true
+	    });
+	 </script>
+	 {% endblock %}	
+{% endblock %}	 	
+</body>
+</html>
