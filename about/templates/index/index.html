@@ -1,1 +1,356 @@
 {% extends 'base.html' %}
+{% load static %}
+{% block side_navigation_home %}
+<div class="side_navigation" onclick='click_side_navigation()' onmouseover='click_side_navigation()' onmouseout='deactivate_side_navigation()'>
+	<div class="side_navigation-list">
+		<div class="list-item">
+			<div class="item-indicator-block indicator-section_1">
+				<div class="circle"></div>
+			</div>
+			<a href="#section_1">
+				<div class="item-text-block">
+					<div class="item-text">{{lang_dict.list_nav_section_indicators.menu}}</div>
+				</div>
+			</a>
+		</div>
+		<div class="list-item">
+			<div class="item-indicator-block indicator-section_2">
+				<div class="circle"></div>
+			</div>
+			<a href="#section_2">
+				<div class="item-text-block">
+					<div class="item-text">{{lang_dict.list_nav_section_indicators.lineup}}</div>
+				</div>
+			</a>
+		</div>
+		<div class="list-item">
+			<div class="item-indicator-block indicator-section_3">
+				<div class="circle"></div>
+			</div>
+			<a href="#section_3">
+				<div class="item-text-block">
+					<div class="item-text">{{lang_dict.list_nav_section_indicators.our_services}}</div>
+				</div>
+			</a>
+		</div>
+		<div class="list-item">
+			<div class="item-indicator-block indicator-section_4">
+				<div class="circle"></div>
+			</div>
+			<a href="#section_4">
+				<div class="item-text-block">
+					<div class="item-text">{{lang_dict.list_nav_section_indicators.promotions_news}}</div>
+				</div>
+			</a>
+		</div>
+		<div class="list-item">
+			<div class="item-indicator-block indicator-section_5">
+				<div class="circle"></div>
+			</div>
+			<a href="#section_5">
+				<div class="item-text-block">
+					<div class="item-text">{{lang_dict.list_nav_section_indicators.contacts}}</div>
+				</div>
+			</a>
+		</div>
+		<div class="list-item">
+			<div class="item-indicator-block indicator-section_6">
+				<div class="circle"></div>
+			</div>
+			<a href="#section_6">
+				<div class="item-text-block">
+					<div class="item-text">{{lang_dict.list_nav_section_indicators.footer}}</div>
+				</div>
+			</a>
+		</div>
+	</div>
+</div>
+{% endblock %}
+{% block main_content %}
+<section class="section_1" id='section_1'>
+	<div class="slider">
+	    <div class="slider__wrapper">
+	      <div class="slider__items">
+	      	{% for slider in list_for_slider %}
+		        <div class="slider__item item-{{ slider.slide_number }}">
+		          	<div class="background-image background_section_1 slide_{{ slider.slide_number }} w2560_h1080" style="background-image: url('{{ slider.picture }}');"></div>
+		          	<div class="substrate"></div>
+		          	<div class="slider-content">
+		          		<div class="slider-description">
+		          			<div class="slider-description-title">
+		          				<div class="title-text">
+		          					{{ slider.title }}
+		          				</div>
+		          			</div>
+		          			<div class="slider-description-text">
+		          				<div class="text-description">
+		          					{{ slider.short_description }}
+		          				</div>
+		          			</div>
+		          			<div class="slider-description-button">
+		          				<a href="#">
+			          				<div class="button">
+			          					<span>{{ slider.text_button }}</span>
+			          				</div>
+		          				</a>
+		          			</div>
+		          		</div>
+		          	</div>
+		        </div>
+		     {% endfor %}
+
+
+	      </div>
+	    </div>
+	</div>
+</section>
+<section class="section_2" id='section_2'>
+	<div class="wrapper">
+		<div class="empty-for-nav"></div>
+		<div class="title-section">
+			<div class="text-title-section">
+				<span>{{lang_dict.lineup}}</span>
+			</div>
+			<div class="text-underline"></div>
+		</div>
+		<div class="section-conteiner">
+			<div class="list-auto">
+				{% for automobile in list_automobiles %}
+			   	   <div class="auto-item">
+				   		<a href="#">
+					   		<div class="auto-img" style='background-image: url("{{ automobile.url_auto.url }}");'></div>
+					   		<div class="auto-name"><strong>{{ automobile.title_auto }}</strong> 
+						   		{% if automobile.availability_hybrid %}
+						   			<span class="hybrid">{{lang_dict.hybrid}}</span>
+						   		{% endif %}
+					   		</div>
+					   		<div class="auto-price">{{lang_dict.price}}<span class="price">{{lang_dict.price_from}}{{ automobile.price_starts }}</span> грн</div>
+					   		<div class="auto-line"></div>
+					   		<div class="auto-detail">{{lang_dict.more_detail}}</div>
+					   	</a>
+			   		</div>
+			   {% endfor %} 
+			</div>
+		</div>
+
+	</div>
+	
+</section>
+<section class="section_3" id='section_3'>
+	<div class="section-background" style="background-image: url('{% static 'site_images/section3.jpg' %}');"></div>
+	<div class="wrapper wrapper_section_3">
+		<div class="empty-for-nav"></div>
+		<div class="title-section title-section_3">
+			<div class="text-title-section">
+				<span>{{lang_dict.our_services}}</span>
+			</div>
+			<div class="text-underline text-underline_section_3"></div>
+		</div>
+		<div class="section-conteiner section-conteiner_section_3">
+			<div class="wrapper-servic">
+				   <div class="services-item">
+				   		<div class="services-item-height"></div>
+				   		<a href="#">
+				   			<div class="cervice-content">
+				   				<div class="cervice-content-block">
+				   					<div class="cervice-content-img" style='background-image: url("{% static "site_images/driver.png" %}");'></div>
+				   					<div class="cervice-content-text">{{lang_dict.list_services.test_drive}}</div>
+				   				</div>
+				   			</div>
+				   		</a>
+				   </div>
+				   <div class="services-item">
+				   		<div class="services-item-height"></div>
+				   		<a href="#">
+				   			<div class="cervice-content">
+				   				<div class="cervice-content-block">
+				   					<div class="cervice-content-img" style='background-image: url("{% static "site_images/car.png" %}");'></div>
+				   					<div class="cervice-content-text">{{lang_dict.list_services.corporate_sales}}</div>
+				   				</div>
+				   			</div>
+				   		</a>
+				   </div>
+				   <div class="services-item">
+				   		<div class="services-item-height"></div>
+				   		<a href="#">
+				   			<div class="cervice-content">
+				   				<div class="cervice-content-block">
+				   					<div class="cervice-content-img" style='background-image: url("{% static "site_images/transport.png" %}");'></div>
+				   					<div class="cervice-content-text">{{lang_dict.list_services.order_car}}</div>
+				   				</div>
+				   			</div>
+				   		</a>
+				   </div>
+				   <div class="services-item">
+				   		<div class="services-item-height"></div>
+				   		<a href="#">
+				   			<div class="cervice-content">
+				   				<div class="cervice-content-block">
+				   					<div class="cervice-content-img" style='background-image: url("{% static "site_images/tire.png" %}");'></div>
+				   					<div class="cervice-content-text">{{lang_dict.list_services.maintenance}}</div>
+				   				</div>
+				   			</div>
+				   		</a>
+				   </div>
+				   <div class="services-item">
+				   		<div class="services-item-height"></div>
+				   		<a href="#">
+				   			<div class="cervice-content">
+				   				<div class="cervice-content-block">
+				   					<div class="cervice-content-img" style='background-image: url("{% static "site_images/car (1).png" %}");'></div>
+				   					<div class="cervice-content-text">{{lang_dict.list_services.original_spares}}</div>
+				   				</div>
+				   			</div>
+				   		</a>
+				   </div>
+				   <div class="services-item">
+				   		<div class="services-item-height"></div>
+				   		<a href="#">
+				   			<div class="cervice-content">
+				   				<div class="cervice-content-block">
+				   					<div class="cervice-content-img" style='background-image: url("{% static "site_images/car (3).png" %}");'></div>
+				   					<div class="cervice-content-text">{{lang_dict.list_services.carwash}}</div>
+				   				</div>
+				   			</div>
+				   		</a>
+				   </div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="section_4" id='section_4'>
+	<div class="wrapper">
+		<div class="empty-for-nav"></div>
+		<div class="title-section">
+			<div class="text-title-section">
+				<span>{{lang_dict.promotions_news}}</span>
+			</div>
+			<div class="text-underline"></div>
+		</div>
+		<div class="section-conteiner section-conteiner-section_4">
+			<div class="block-promotions_news">
+				<div class="block-item block-news">
+					<div class="block--img block--img=-news" style='background-image: url("{{ last_news.picture_563_266.url }}");'></div>
+					<div class="block--content block--content-news">
+						<div class="title-block title-news">{{ title_news }}</div>
+						<div class="text-block text-news">{{shot_description_news|safe}}</div>
+						<div class="more-block more-block-news"><a href="#">{{lang_dict.read_more}}</a></div>
+					</div>
+				</div>
+				<div class="block-item block-promotions">
+					<div class="block--img block--img=-promotions" style='background-image: url("{{ last_promotion.picture_563_266.url }}");'></div>
+					<div class="block--content block--content-promotions">
+						<div class="title-block title-promotions">{{ title_promotion }}</div>
+						<div class="text-block text-promotions">{{shot_description_promotion|safe}}</div>
+						<div class="more-block more-block-promotions"><a href="#">{{lang_dict.read_more}}</a></div>
+					</div>
+				</div>
+			</div>
+			<div class="buttons-promotions_news">
+				<div class="buttons-list">
+					<div class="button button-promotions">
+						<div class="text-buttom-m1 promotions">
+							<div class="text-buttom">
+								<div>
+									<span>{{lang_dict.button_promotions}}</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="button button-news">
+						<div class="text-buttom-m1 news">
+							<div class="text-buttom">
+								<div>
+									<span>{{lang_dict.button_news}}</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="subscription-block">
+				<div class="subscription-block-conteiner">
+					<div class="text-conteiner subscription-item item-1">
+						<div class="text-block">
+							<div class="text-conteiner-question">{{lang_dict.list_subscribe.text}}</div>
+							<div class="text-conteiner-call">{{lang_dict.list_subscribe.call_action}}</div>
+						</div>
+					</div>
+					<div class="mail-conteiner subscription-item item-2">
+						<input type="text" id="email_fild" name="email_fild" placeholder="E-mail">
+					</div>
+					<div class="button-conteiner subscription-item item-3">
+						<div class="button-text">
+							<div class="button-text-p1">
+								<div>{{lang_dict.button_send}}</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<section class="section_5" id='section_5' style="background-image: url('{% static 'site_images/фон контакти 1.jpg' %}');">
+	<div class="wrapper">
+		<div class="empty-for-nav"></div>
+		<div class="section-conteiner">
+			<div class="section-conteiner-item block-contact">
+				<div class="title-block">{{lang_dict.contacts.contacts}}</div>
+				<div class="content-block">
+					<div class="content-block-conteiner">
+						<div class="content-block-conteiner-item sales-department-block">
+							<div class="content-block-conteiner-item-1">
+								<div class="img img-tel" style="background-image: url('{% static 'site_images\phone.png' %}');"></div>
+							</div>
+							<div class="text-block">
+								<div class="text">{{lang_dict.contacts.sales_department}}</div>
+								<div class="text-cont">{{lang_dict.contacts.tel_sales_department}}</div>
+							</div>
+						</div>
+						<div class="content-block-conteiner-item service-department-block">
+							<div class="content-block-conteiner-item-1">
+								<div class="img img-tel" style="background-image: url('{% static 'site_images\phone.png' %}');"></div>
+							</div>
+							<div class="text-block">
+								<div class="text">{{lang_dict.contacts.maintenance_department}}</div>
+								<div class="text-cont">{{lang_dict.contacts.tel_maintenance_department}}</div>
+							</div>
+						</div>
+						<div class="content-block-conteiner-item mail-block">
+							<div class="content-block-conteiner-item-1">
+								<div class="img img-mail" style="background-image: url('{% static 'site_images\mail.png' %}');"></div>
+							</div>
+							<div class="text-block">
+								<div class="text">{{lang_dict.contacts.e_mail}}</div>
+								<div class="text-cont">test@enterprice.com</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="block-social">
+					<div class="block-social-title">{{lang_dict.we_in_social}}</div>
+					<div class="block-social-conteiner">
+						<div class="block-social-conteiner-1">
+							<div class="social-item telegram" style='background-image: url("{% static "site_images/1200px-Telegram_2019_Logo.svg.png" %}");'></div>
+						</div>
+						<div class="block-social-conteiner-1">
+							<div class="social-item instagram" style='background-image: url("{% static "site_images/a25f4f58938bbe61357ebca42d23866f.png" %}");'></div>
+						</div>
+						<div class="block-social-conteiner-1">
+							<div class="social-item facebook" style='background-image: url("{% static "site_images/facebook_logos_PNG19751.png" %}");'></div>
+						</div>
+						<div class="block-social-conteiner-1">
+							<div class="social-item youtube" style='background-image: url("{% static "site_images/YouTube-Emblem.png" %}");'></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="section-conteiner-item block-map">
+				<div class="title-block">{{lang_dict.on_map}}</div>
+				<div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2542.997703316464!2d30.681900815894856!3d50.403880398600236!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4c48cfe1a8f77%3A0x7898d6fff0cddc40!2sBoryspilska!5e0!3m2!1sru!2sua!4v1598702862396!5m2!1sru!2sua" width="800px" height="500px" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe></div>
+			</div>
+		</div>
+	</div>
+</section>
+{% endblock %}
