@@ -95,7 +95,12 @@ class Engine_type(models.Model):
     engine_type = models.CharField(default='', max_length=138)
     
     class Meta:
-        verbose_name_plural = "Тип двигателя"  
+        verbose_name_plural = "Тип двигателя" 
+        
+    def __str__(self):
+        querySet = Engine_type_description.objects.filter(engine_type = self.id, language = 4) 
+        engine_type = querySet[0]  
+        return engine_type.title
         
 class Engine_type_description(models.Model):
     
@@ -112,7 +117,12 @@ class Engine_volume(models.Model):
     engine_volume = models.CharField(default='', max_length=138)
     
     class Meta:
-        verbose_name_plural = "Объем двигателя"  
+        verbose_name_plural = "Объем двигателя" 
+        
+    def __str__(self):
+        querySet = Engine_volume_description.objects.filter(engine_volume = self.id, language = 4) 
+        a = querySet[0]  
+        return a.title        
         
 class Engine_volume_description(models.Model):
     
@@ -130,6 +140,11 @@ class Transmission(models.Model):
     class Meta:
         verbose_name_plural = "Трансмиссия"  
         
+    def __str__(self):
+        querySet = Transmission_description.objects.filter(transmission = self.id, language = 4) 
+        a = querySet[0]  
+        return a.title         
+        
 class Transmission_description(models.Model):
     
     transmission = models.ForeignKey(Transmission, on_delete = models.CASCADE)
@@ -144,7 +159,12 @@ class Type_drive(models.Model):
     type_drive = models.CharField(default='', max_length=138)
     
     class Meta:
-        verbose_name_plural = "Привод"  
+        verbose_name_plural = "Привод"
+        
+    def __str__(self):
+        querySet = Type_drive_description.objects.filter(type_drive = self.id, language = 4) 
+        a = querySet[0]  
+        return a.title         
         
 class Type_drive_description(models.Model):
     
