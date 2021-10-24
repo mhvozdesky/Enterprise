@@ -162,10 +162,10 @@ class Automobiles(models.Model):
     picture_770_340 = models.ImageField('picture 770x340', upload_to='images/automobiles')
     availability_hybrid = models.BooleanField(default=False)
     price_starts = models.CharField(max_length=20)
-    engine_type = models.ForeignKey(Engine_type, on_delete = models.CASCADE, blank=True)
-    engine_volume = models.ForeignKey(Engine_volume, on_delete = models.CASCADE, blank=True)
-    transmission = models.ForeignKey(Transmission, on_delete = models.CASCADE, blank=True)
-    type_drive = models.ForeignKey(Type_drive, on_delete = models.CASCADE, blank=True)    
+    engine_type = models.ForeignKey(Engine_type, on_delete = models.CASCADE, null=True)
+    engine_volume = models.ForeignKey(Engine_volume, on_delete = models.CASCADE, null=True)
+    transmission = models.ForeignKey(Transmission, on_delete = models.CASCADE, null=True)
+    type_drive = models.ForeignKey(Type_drive, on_delete = models.CASCADE, null=True)    
     
     def __str__(self):
         querySet_auto = Automobiles_description.objects.filter(Automobile = self.id, language = 4) 
