@@ -90,7 +90,71 @@ class MainSlider_description_New(models.Model):
         unique_together = ('Slider', 'language',) 
  
 
- 
+class Engine_type(models.Model):
+    
+    engine_type = models.CharField(default='', max_length=138)
+    
+    class Meta:
+        verbose_name_plural = "Тип двигателя"  
+        
+class Engine_type_description(models.Model):
+    
+    engine_type = models.ForeignKey(Engine_type, on_delete = models.CASCADE)
+    language = models.ForeignKey(Languages, on_delete = models.CASCADE)
+    title = models.CharField(default='', max_length=138)
+    
+    
+    class Meta: 
+        unique_together = ('engine_type', 'language',)  
+        
+class Engine_volume(models.Model):
+    
+    engine_volume = models.CharField(default='', max_length=138)
+    
+    class Meta:
+        verbose_name_plural = "Объем двигателя"  
+        
+class Engine_volume_description(models.Model):
+    
+    engine_volume = models.ForeignKey(Engine_volume, on_delete = models.CASCADE)
+    language = models.ForeignKey(Languages, on_delete = models.CASCADE)
+    title = models.CharField(default='', max_length=138)
+
+    class Meta: 
+        unique_together = ('engine_volume', 'language',) 
+        
+class Transmission(models.Model):
+    
+    transmission = models.CharField(default='', max_length=138)
+    
+    class Meta:
+        verbose_name_plural = "Трансмиссия"  
+        
+class Transmission_description(models.Model):
+    
+    transmission = models.ForeignKey(Transmission, on_delete = models.CASCADE)
+    language = models.ForeignKey(Languages, on_delete = models.CASCADE)
+    title = models.CharField(default='', max_length=138)
+
+    class Meta: 
+        unique_together = ('transmission', 'language',) 
+        
+class Type_drive(models.Model):
+    
+    type_drive = models.CharField(default='', max_length=138)
+    
+    class Meta:
+        verbose_name_plural = "Привод"  
+        
+class Type_drive_description(models.Model):
+    
+    type_drive = models.ForeignKey(Type_drive, on_delete = models.CASCADE)
+    language = models.ForeignKey(Languages, on_delete = models.CASCADE)
+    title = models.CharField(default='', max_length=138)
+
+    class Meta: 
+        unique_together = ('type_drive', 'language',)         
+        
     
 class Automobiles(models.Model):
     #the model presents Automobiles
@@ -98,6 +162,10 @@ class Automobiles(models.Model):
     picture_770_340 = models.ImageField('picture 770x340', upload_to='images/automobiles')
     availability_hybrid = models.BooleanField(default=False)
     price_starts = models.CharField(max_length=20)
+    engine_type = models.ForeignKey(Engine_type, on_delete = models.CASCADE, blank=True)
+    engine_volume = models.ForeignKey(Engine_volume, on_delete = models.CASCADE, blank=True)
+    transmission = models.ForeignKey(Transmission, on_delete = models.CASCADE, blank=True)
+    type_drive = models.ForeignKey(Type_drive, on_delete = models.CASCADE, blank=True)    
     
     def __str__(self):
         querySet_auto = Automobiles_description.objects.filter(Automobile = self.id, language = 4) 
