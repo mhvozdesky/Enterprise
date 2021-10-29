@@ -107,6 +107,7 @@ class Engine_type_description(models.Model):
     engine_type = models.ForeignKey(Engine_type, on_delete = models.CASCADE)
     language = models.ForeignKey(Languages, on_delete = models.CASCADE)
     title = models.CharField(default='', max_length=138)
+    class_name = models.CharField(default='', max_length=138)
     
     
     class Meta: 
@@ -129,6 +130,7 @@ class Engine_volume_description(models.Model):
     engine_volume = models.ForeignKey(Engine_volume, on_delete = models.CASCADE)
     language = models.ForeignKey(Languages, on_delete = models.CASCADE)
     title = models.CharField(default='', max_length=138)
+    class_name = models.CharField(default='', max_length=138)
 
     class Meta: 
         unique_together = ('engine_volume', 'language',) 
@@ -150,6 +152,7 @@ class Transmission_description(models.Model):
     transmission = models.ForeignKey(Transmission, on_delete = models.CASCADE)
     language = models.ForeignKey(Languages, on_delete = models.CASCADE)
     title = models.CharField(default='', max_length=138)
+    class_name = models.CharField(default='', max_length=138)
 
     class Meta: 
         unique_together = ('transmission', 'language',) 
@@ -171,6 +174,7 @@ class Type_drive_description(models.Model):
     type_drive = models.ForeignKey(Type_drive, on_delete = models.CASCADE)
     language = models.ForeignKey(Languages, on_delete = models.CASCADE)
     title = models.CharField(default='', max_length=138)
+    class_name = models.CharField(default='', max_length=138)
 
     class Meta: 
         unique_together = ('type_drive', 'language',)         
