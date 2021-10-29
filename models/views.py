@@ -15,10 +15,13 @@ def index(request):
     
     lang_dict = lang_file.lang_dict[lang_id]
     
+    list_automobiles = about_views.get_automobiles_info(lang_id)
+    
     context = {
         'lang_dict': lang_dict,
         'path_other_lang': path_other_lang,
         'lang': lang,
+        'list_automobiles': list_automobiles,
     }
     
     template = r'models/models.html'

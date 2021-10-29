@@ -1,6 +1,7 @@
 import re
 from django.shortcuts import render
 from about.models import MainSlider, Automobiles, News, Promotion, Languages, News_description, Promotion_description, Automobiles_description, MainSliderNew, MainSlider_description_New
+from about.models import Engine_type, Engine_type_description, Engine_volume, Engine_volume_description, Transmission, Transmission_description, Type_drive, Type_drive_description
 from local_languages import lang_file
 
 def get_info_slider(QuerySet_slides_new, lang_id):
@@ -35,6 +36,28 @@ def get_lang_info(request):
         
     return [lang, path_other_lang, lang_id]    
 
+def get_automobiles_info(lang_id):
+    QuerySet_automobiles = Automobiles.objects.all()
+    
+    list_automobiles = []
+    for auto in QuerySet_automobiles:
+        local_dict_automobiles = {}
+        local_dict_automobiles['url_auto'] = auto.picture_770_340
+        querySet_Automobiles_description = Automobiles_description.objects.filter(Automobile = auto.id, language = lang_id)
+        
+        if len(querySet_Automobiles_description) > 0:
+            local_dict_automobiles['title_auto'] = querySet_Automobiles_description[0].title
+        else:
+            local_dict_automobiles['title_auto'] = ''
+            
+        local_dict_automobiles['availability_hybrid'] = auto.availability_hybrid  
+        local_dict_automobiles['price_starts'] = auto.price_starts
+        local_dict_automobiles['engine_type_local_lang'] = Engine_type_description.objects.filter(engine_type = auto.engine_type.id, language = lang_id)[0].title
+        
+        list_automobiles.append(local_dict_automobiles)
+        
+    return  list_automobiles   
+
 def index(request):
     
     lang_info = get_lang_info(request)
@@ -49,7 +72,6 @@ def index(request):
     count_slides_new = MainSliderNew.objects.all().count() # адаптивная страница
     list_slides = MainSlider.objects.all()
     QuerySet_slides_new = MainSliderNew.objects.all()
-    QuerySet_automobiles = Automobiles.objects.all()
     last_news = News.objects.all()[0]
     last_promotion = Promotion.objects.all()[0]
     
@@ -74,21 +96,7 @@ def index(request):
         title_promotion = description_promotions[0].title
         shot_description_promotion = description_promotions[0].short_description
         
-    list_automobiles = []
-    for auto in QuerySet_automobiles:
-        local_dict_automobiles = {}
-        local_dict_automobiles['url_auto'] = auto.picture_770_340
-        querySet_Automobiles_description = Automobiles_description.objects.filter(Automobile = auto.id, language = lang_id)
-        
-        if len(querySet_Automobiles_description) > 0:
-            local_dict_automobiles['title_auto'] = querySet_Automobiles_description[0].title
-        else:
-            local_dict_automobiles['title_auto'] = ''
-            
-        local_dict_automobiles['availability_hybrid'] = auto.availability_hybrid  
-        local_dict_automobiles['price_starts'] = auto.price_starts
-        
-        list_automobiles.append(local_dict_automobiles)
+    list_automobiles = get_automobiles_info(lang_id)
     
     context = {
         #'pref': pref,

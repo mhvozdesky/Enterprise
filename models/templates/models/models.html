@@ -1,2 +1,39 @@
 {% extends 'base.html' %}
 {% load static %}
+
+{% block class_header %}<div class="header-conteiner-common">{% endblock %}
+
+{% block main_content %}
+<div class="wrapper">
+	<section class="top-label" style="background-image: url('{% static 'site_images/Rectangle 6.png' %}');">
+		<div class="title-section">
+			<div class="title"></div>
+		</div>
+	</section>
+	<div class="dividing_line-conteiner">
+		<dir class="dividing_line"></dir>
+	</div>
+	<section class="filter" style="background-image: url('{% static 'site_images/Rectangle 83.png' %}');">
+		<div class="filter-box">
+			<div class="filter-box-conteiner">
+				<div class="filter-title">
+					<div class="title"></div>
+				</div>
+				<div class="filter-list-box">
+					<div class="filter-list">
+						<div class="filter-item">
+							<div class="filter-item-lavel">
+								<div class="text"></div>
+							</div>
+							<div class="filter-item-volume">
+								<div class="volume-box"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="grand-list-model"></section>
+</div>
+{% endblock %}
