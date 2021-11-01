@@ -52,8 +52,17 @@ def get_automobiles_info(lang_id):
             
         local_dict_automobiles['availability_hybrid'] = auto.availability_hybrid  
         local_dict_automobiles['price_starts'] = auto.price_starts
-        local_dict_automobiles['engine_type_local_lang'] = Engine_type_description.objects.filter(engine_type = auto.engine_type.id, language = lang_id)[0].title
         
+       
+        local_dict_automobiles['engine_type_local_lang'] = Engine_type_description.objects.filter(engine_type = auto.engine_type.id, language = lang_id)[0].title 
+        local_dict_automobiles['engine_type_class_name'] = Engine_type_description.objects.filter(engine_type = auto.engine_type.id, language = lang_id)[0].class_name
+        local_dict_automobiles['engine_volume_local_lang'] = Engine_volume_description.objects.filter(engine_volume = auto.engine_volume.id, language = lang_id)[0].title
+        local_dict_automobiles['engine_volume_class_name'] = Engine_volume_description.objects.filter(engine_volume = auto.engine_volume.id, language = lang_id)[0].class_name 
+        local_dict_automobiles['transmission_local_lang'] = Transmission_description.objects.filter(transmission = auto.transmission.id, language = lang_id)[0].title
+        local_dict_automobiles['transmission_class_name'] = Transmission_description.objects.filter(transmission = auto.transmission.id, language = lang_id)[0].class_name
+        local_dict_automobiles['type_drive_local_lang'] = Type_drive_description.objects.filter(type_drive = auto.type_drive.id, language = lang_id)[0].title
+        local_dict_automobiles['type_drive_class_name'] = Type_drive_description.objects.filter(type_drive = auto.type_drive.id, language = lang_id)[0].class_name  
+
         list_automobiles.append(local_dict_automobiles)
         
     return  list_automobiles   

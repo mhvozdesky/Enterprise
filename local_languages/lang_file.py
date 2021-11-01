@@ -85,6 +85,14 @@ lang_dict = {
         },
         'more_detail': 'Детальніше',
         'read_more': 'Читати далі',
+        'models_filter': {
+            'filter_title': 'Оберіть свій автомобіль',
+            'price': 'Ціна',
+            'engine_type': 'Тип двигуна',
+            'engine_volume': "Об'єм двигуна",
+            'transmission': 'Трансмісія',
+            'type_drive': 'Тип приводу',
+        },
         
     },
     #Русский
@@ -173,6 +181,14 @@ lang_dict = {
         },
         'more_detail': 'Подробнее',
         'read_more': 'Читать дальше',
+        'models_filter': {
+            'filter_title': 'Выберите свой автомобиль',
+            'price': 'Цена',
+            'engine_type': 'Тип двигателя',
+            'engine_volume': "Объем двигателя",
+            'transmission': 'Трансмиссия        ',
+            'type_drive': 'Тип привода',
+        },
         
     },
 }
