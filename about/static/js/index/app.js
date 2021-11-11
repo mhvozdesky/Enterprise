@@ -55,7 +55,11 @@ function pos_nav(){
 	//    nav.classList.toggle("sticky");
 	//  }
 
-	define_active_section();
+	// функцию нужно запустить только на главной странице
+	a = document.querySelectorAll('.header-conteiner');
+	if (a.length > 0){
+		define_active_section();
+	}
 
 
 }
@@ -195,25 +199,43 @@ function define_active_section(){
 
 
 function resizeListener(){
-	pos_slider_description();
+	// функция только на главной странице
+
+	a = document.querySelectorAll('.header-conteiner');
+	if (a.length > 0){
+		pos_slider_description();
+		navigation_indicator_size();
+		navigation_indicator_position();
+		define_active_section();
+	}
+
 	adapt_place_for_nav();
 	adaptation_section_6();
-	navigation_indicator_size();
-	navigation_indicator_position();
-	define_active_section();
+	
+	
 }
 
 document.addEventListener('click', ClickListener);
 
 window.onload = function() {
-  pos_slider_description();
+  
+	// функция только на главной странице
+
+	a = document.querySelectorAll('.header-conteiner');
+	if (a.length > 0){
+		pos_slider_description();
+		navigation_indicator_size();
+  		navigation_indicator_position();
+  		define_active_section();
+	}
+
+
   pos_nav();
   adapt_place_for_nav();
   bubu();
   adaptation_section_6();
-  navigation_indicator_size();
-  navigation_indicator_position();
-  define_active_section();
+  
+  
 };
 
 

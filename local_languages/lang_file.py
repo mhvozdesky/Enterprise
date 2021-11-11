@@ -88,10 +88,52 @@ lang_dict = {
         'models_filter': {
             'filter_title': 'Оберіть свій автомобіль',
             'price': 'Ціна',
+            'body_type': 'Тип кузова',
             'engine_type': 'Тип двигуна',
             'engine_volume': "Об'єм двигуна",
             'transmission': 'Трансмісія',
             'type_drive': 'Тип приводу',
+            'items_price': {
+                '500000': 'До 500 000',
+                '500000_1000000': '500 000 - 1 000 000',
+                '1000000_1500000': '1 000 000 - 1 500 000',
+                '1500000_2000000': '1 500 000 - 2 000 000',
+                '2000000': 'Більше 2 000 000',
+            },
+            'items_body_type': {
+                'sedan': 'Седан',
+                'crossover': 'Кросовер',
+                'pickup': 'Пікап',
+                'hatchback': 'Хетчбек',
+                'suv': 'Позашляховик',
+            },
+            'engine_type_type': {
+                'hybrid': 'Гібрид',
+                'electro': 'Електро',
+                'diesel': 'Дизель',
+                'petrol': 'Бензин',
+            },
+            'engine_volume_type': {
+                '1_2': '1.2',
+                '1_5': '1.5',
+                '1_8': '1.8',
+                '2_0': '2.0',
+                '2_5': '2.5',
+                '3_0': '3.0',
+            },
+            'transmission_type': {
+                'automatic_transmission': 'АКПП',
+                'manual_transmission': 'МКПП',
+            },
+            'type_drive_type': {
+                'four_wheel_drive': 'Повний',
+                'rear_wheel_drive': 'Задній',
+                'front_wheel_drive': 'Передній',
+            },
+            'button_filter': {
+                'button_1': 'Фільтр',
+                'button_2': 'Очистити',
+            }
         },
         
     },

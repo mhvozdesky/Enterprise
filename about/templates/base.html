@@ -230,16 +230,10 @@
 	{% endblock %}
 	{% block script_ex %}
 	<script src="{% static 'js\index\app.js' %}"></script>
-	<script src="{% static 'js\index\slider_old.js' %}"></script>
+	{% block script_ex_slider_old %}{% endblock %}
 	<!--<script src="{% static 'js\index\nav_fixed.js' %}"></script>-->
 	{% endblock %}
-	{% block script_in %}
-	  <script>
-	    slideShow('.slider', {
-	      isAutoplay: true
-	    });
-	 </script>
-	 {% endblock %}	
+	{% block script_in %}{% endblock %}	
 {% endblock %}	 	
 </body>
 </html>

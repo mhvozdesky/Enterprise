@@ -354,3 +354,12 @@
 	</div>
 </section>
 {% endblock %}
+
+{% block script_ex_slider_old %}<script src="{% static 'js\index\slider_old.js' %}"></script>{% endblock %}
+{% block script_in %}
+  <script>
+    slideShow('.slider', {
+      isAutoplay: true
+    });
+ </script>
+{% endblock %}

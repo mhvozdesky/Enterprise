@@ -4,7 +4,7 @@
 {% block class_header %}<div class="header-conteiner-common">{% endblock %}
 
 {% block main_content %}
-<div class="wrapper">
+<div class="wrapper wrapper-models">
 	<section class="top-label">
 		<div class="title-section_models">
 			<div class="title">{{lang_dict.list_nav_section_indicators.lineup}}</div>
@@ -18,23 +18,237 @@
 		<div class="filter-box">
 			<div class="filter-box-conteiner">
 				<div class="filter-title">
-					<div class="title"></div>
+					<div class="title">{{lang_dict.models_filter.filter_title}}</div>
 				</div>
 				<div class="filter-list-box">
 					<div class="filter-list">
 						<div class="filter-item">
-							<div class="filter-item-lavel">
-								<div class="text"></div>
+							<div class="filter-item-label">
+								<div class="text">{{lang_dict.models_filter.price}}</div>
 							</div>
 							<div class="filter-item-volume">
-								<div class="volume-box"></div>
+								<div class="volume-box">
+									<div class="volume-box-1-level 1_level">
+										<div class="capture">
+											<div class="text">---</div>
+										</div>
+										<div class="icon"></div>
+									</div>
+									<div class="volume-box-2_level 2_level-price">
+										<div class="item item-1">
+											<div class="text">{{lang_dict.models_filter.items_price.500000}}</div>
+										</div>
+										<div class="item item-2">
+											<div class="text">{{lang_dict.models_filter.items_price.500000_1000000}}</div>
+										</div>
+										<div class="item item-3">
+											<div class="text">{{lang_dict.models_filter.items_price.1000000_1500000}}</div>
+										</div>
+										<div class="item item-4">
+											<div class="text">{{lang_dict.models_filter.items_price.1500000_2000000}}</div>
+										</div>
+										<div class="item item-5">
+											<div class="text">{{lang_dict.models_filter.items_price.2000000}}</div>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
+						<div class="filter-item">
+							<div class="filter-item-label">
+								<div class="text">{{lang_dict.models_filter.body_type}}</div>
+							</div>
+							<div class="filter-item-volume">
+								<div class="volume-box">
+									<div class="volume-box-1-level 1_level">
+										<div class="capture">
+											<div class="text">---</div>
+										</div>
+										<div class="icon"></div>
+									</div>
+									<div class="volume-box-2_level 2_level-price">
+										<div class="item item-1">
+											<div class="text">{{lang_dict.models_filter.items_body_type.sedan}}</div>
+										</div>
+										<div class="item item-2">
+											<div class="text">{{lang_dict.models_filter.items_body_type.crossover}}</div>
+										</div>
+										<div class="item item-3">
+											<div class="text">{{lang_dict.models_filter.items_body_type.pickup}}</div>
+										</div>
+										<div class="item item-4">
+											<div class="text">{{lang_dict.models_filter.items_body_type.hatchback}}</div>
+										</div>
+										<div class="item item-5">
+											<div class="text">{{lang_dict.models_filter.items_body_type.suv}}</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="filter-item">
+							<div class="filter-item-label">
+								<div class="text">{{lang_dict.models_filter.engine_type}}</div>
+							</div>
+							<div class="filter-item-volume">
+								<div class="volume-box">
+									<div class="volume-box-1-level 1_level">
+										<div class="capture">
+											<div class="text">---</div>
+										</div>
+										<div class="icon"></div>
+									</div>
+									<div class="volume-box-2_level 2_level-price">
+										<div class="item item-1">
+											<div class="text">{{lang_dict.models_filter.engine_type_type.hybrid}}</div>
+										</div>
+										<div class="item item-2">
+											<div class="text">{{lang_dict.models_filter.engine_type_type.electro}}</div>
+										</div>
+										<div class="item item-3">
+											<div class="text">{{lang_dict.models_filter.engine_type_type.diesel}}</div>
+										</div>
+										<div class="item item-4">
+											<div class="text">{{lang_dict.models_filter.engine_type_type.petrol}}</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="filter-item">
+							<div class="filter-item-label">
+								<div class="text">{{lang_dict.models_filter.engine_volume}}</div>
+							</div>
+							<div class="filter-item-volume">
+								<div class="volume-box">
+									<div class="volume-box-1-level 1_level">
+										<div class="capture">
+											<div class="text">---</div>
+										</div>
+										<div class="icon"></div>
+									</div>
+									<div class="volume-box-2_level 2_level-price">
+										<div class="item item-1">
+											<div class="text">{{lang_dict.models_filter.engine_volume_type.1_2}}</div>
+										</div>
+										<div class="item item-2">
+											<div class="text">{{lang_dict.models_filter.engine_volume_type.1_5}}</div>
+										</div>
+										<div class="item item-3">
+											<div class="text">{{lang_dict.models_filter.engine_volume_type.1_8}}</div>
+										</div>
+										<div class="item item-4">
+											<div class="text">{{lang_dict.models_filter.engine_volume_type.2_0}}</div>
+										</div>
+										<div class="item item-5">
+											<div class="text">{{lang_dict.models_filter.engine_volume_type.2_5}}</div>
+										</div>
+										<div class="item item-5">
+											<div class="text">{{lang_dict.models_filter.engine_volume_type.3_0}}</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="filter-item">
+							<div class="filter-item-label">
+								<div class="text">{{lang_dict.models_filter.transmission}}</div>
+							</div>
+							<div class="filter-item-volume">
+								<div class="volume-box">
+									<div class="volume-box-1-level 1_level">
+										<div class="capture">
+											<div class="text">---</div>
+										</div>
+										<div class="icon"></div>
+									</div>
+									<div class="volume-box-2_level 2_level-price">
+										<div class="item item-1">
+											<div class="text">{{lang_dict.models_filter.transmission_type.automatic_transmission}}</div>
+										</div>
+										<div class="item item-2">
+											<div class="text">{{lang_dict.models_filter.transmission_type.manual_transmission}}</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="filter-item">
+							<div class="filter-item-label">
+								<div class="text">{{lang_dict.models_filter.type_drive}}</div>
+							</div>
+							<div class="filter-item-volume">
+								<div class="volume-box">
+									<div class="volume-box-1-level 1_level">
+										<div class="capture">
+											<div class="text">---</div>
+										</div>
+										<div class="icon"></div>
+									</div>
+									<div class="volume-box-2_level 2_level-price">
+										<div class="item item-1">
+											<div class="text">{{lang_dict.models_filter.type_drive_type.four_wheel_drive}}</div>
+										</div>
+										<div class="item item-2">
+											<div class="text">{{lang_dict.models_filter.type_drive_type.rear_wheel_drive}}</div>
+										</div>
+										<div class="item item-3">
+											<div class="text">{{lang_dict.models_filter.type_drive_type.front_wheel_drive}}</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="button-filter-box">
+					<div class="button button-1">
+						<div class="text">{{lang_dict.models_filter.button_filter.button_1}}</div>
+					</div>
+					<div class="button button-2">
+						<div class="text">{{lang_dict.models_filter.button_filter.button_2}}</div>
 					</div>
 				</div>
 			</div>
 		</div>
 	</section>
-	<section class="grand-list-model"></section>
+	<section class="grand-list-model">
+		<div class="models-conteiner">
+			<div class="models-grid">
+				{% for automobile in list_automobiles %}
+					<a href="#">
+						<div class="models-item {{ automobile.engine_type_class_name}} {{ automobile.engine_volume_class_name}} {{ automobile.transmission_class_name}} {{ automobile.type_drive_class_name}}">
+							<div class="models-img" style='background-image: url("{{ automobile.url_auto.url }}");'></div>
+							<div class="models-info">
+								<div class="info-title">{{ automobile.title_auto }}</div>
+								<div class="info-line"></div>
+								<div class="info-price">{{ automobile.price_starts }} грн</div>
+								<div class="info-det">
+									<div class="det-list">
+										<div class="item transmission">
+											<div class="det-img" style="background-image: url('{% static 'site_images/Rectangle 16.png' %}');"></div>
+											<div class="det-label">{{ automobile.transmission_local_lang}}</div>
+										</div>
+										<div class="item engine_type">
+											<div class="det-img" style="background-image: url('{% static 'site_images/Rectangle 17.png' %}');"></div>
+											<div class="det-label">{{ automobile.engine_type_local_lang}}</div>
+										</div>
+										<div class="item engine_volume">
+											<div class="det-img" style="background-image: url('{% static 'site_images/Rectangle 18.png' %}');"></div>
+											<div class="det-label">{{ automobile.engine_volume_local_lang}}</div>
+										</div>
+										<div class="item type_drive">
+											<div class="det-img" style="background-image: url('{% static 'site_images/Rectangle 19.png' %}');"></div>
+											<div class="det-label">{{ automobile.type_drive_local_lang}}</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</a>
+				{% endfor %} 	
+			</div>
+		</div>
+	</section>
 </div>
 {% endblock %}
