@@ -1916,6 +1916,10 @@ span.price{
 	}
 }
 
+.deactivation{
+	display: hi
+}
+
 
 .models-item:hover{
 	transform: scale(1.05);
@@ -2012,4 +2016,9 @@ span.price{
 .det-list .det-img{
 	width: 20px;
 	height: 20px;
+}
+
+.button-filter-box a{
+	text-decoration: none;
+	color: black;
 }

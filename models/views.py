@@ -2,7 +2,7 @@ import re
 import about.views as about_views
 from django.shortcuts import render
 from local_languages import lang_file
-
+from about.models import Engine_type, Engine_type_description, Engine_volume, Engine_volume_description, Transmission, Transmission_description, Type_drive, Type_drive_description
 
 
 

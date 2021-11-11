@@ -1,3 +1,21 @@
+// получим список всех полей фильтра
+var filter_field_list = [];
+var filter_fields = document.querySelectorAll('.filter-list .filter-item');
+//var filter_fields = document.querySelectorAll('.volume-box-2_level');
+var url_filter = '?';
+var list_param = {
+	'.filter-item.price': 'p_1', 
+	'.filter-item.body_type': 'p_2', 
+	'.filter-item.engine_type': 'p_3', 
+	'.filter-item.engine_volume': 'p_4',
+	'.filter-item.transmission': 'p_5',
+	'.filter-item.type_drive': 'p_6',
+};
+
+for (var i = 0; i < filter_fields.length; i++) {
+	filter_field_list.push(filter_fields[i]);
+}
+
 function show_menu_modile(x){
   var a = document.querySelector('.header-menu');
   a.classList.toggle("activ");
@@ -6,7 +24,86 @@ function show_menu_modile(x){
 function ClickListener(event){
 
   edit_menu_button(event);
+  work_with_filter(event);
 
+
+}
+
+function work_with_filter(e){
+	//var filter_list = document.querySelector('.filter-list');
+	var filter_list = document.querySelectorAll('.volume-box-2_level');
+	var filter_butons = document.querySelector('.button-filter-box');
+	var press_filter_list = false;
+
+	for (var i = 0; i < filter_list.length; i++) {
+		if (filter_list[i].contains(e.target)){
+			press_filter_list = true;
+		}
+	}
+
+	if (press_filter_list){
+		fill_filter(e);
+	} else if(filter_butons.contains(e.target)){
+		filter_button_processing(e);
+	}
+}
+
+function fill_filter(e){
+	// узнаем на какое поле было нажатие
+	var pressing = null;
+	var filter_item_class = null;
+	var filter_value = '';
+
+	for (var i = 0; i < filter_field_list.length; i++) {
+		if (filter_field_list[i].contains(e.target)){
+			filter_item = filter_field_list[i];
+
+			a = '';
+			for (var class_item = 0; class_item < filter_field_list[i].classList.length; class_item ++){
+				if (a === ''){
+					sep = '';
+				} else{
+					sep = '';
+				}
+
+				a = a + sep + '.' + filter_field_list[i].classList[class_item];
+				filter_item_class = a;
+			}
+		}
+	}
+
+	var values = document.querySelectorAll(filter_item_class + ' .volume-box-2_level .item');
+	for (var i = 0; i < values.length; i++) {
+	 	if (values[i].contains(e.target)){
+	 		filter_value = values[i].querySelector('.text').textContent;
+	 	}
+	 }
+
+	var fild = document.querySelector(filter_item_class + ' .volume-box-1-level .text');
+	fild.textContent = filter_value;
+}
+
+function filter_button_processing(e){
+	var button_1 = document.querySelector('.button-filter-box .button-1');
+	var button_2 = document.querySelector('.button-filter-box .button-2');
+
+	if (button_1.contains(e.target)){
+		button_filter();
+	}else if (button_2.contains(e.target)){
+		button_clean();
+	}
+
+}
+
+function button_filter(){
+	var button_1 = document.querySelector('.a_button-1');
+}
+
+function button_clean(){
+	filds_filter = document.querySelectorAll('.filter-item .volume-box-1-level .text');
+	for (var i = 0; i < filds_filter.length; i++) {
+		filds_filter[i].textContent = '---';
+	}
 }
 
 function edit_menu_button(e){
