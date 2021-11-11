@@ -1,6 +1,8 @@
 from django.contrib import admin
 from .models import MainSlider, Automobiles, News, Promotion, Languages, Title, News_description, Automobiles_description, Promotion_description, MainSliderNew, MainSlider_description_New
 from .models import Engine_type, Engine_type_description, Engine_volume, Engine_volume_description, Transmission, Transmission_description, Type_drive, Type_drive_description
+from .models import Type_body, Type_body_description
+
 
 class TitleInline(admin.TabularInline):
     model = News_description
@@ -64,7 +66,15 @@ class Type_drive_descriptionInline(admin.TabularInline):
 class Type_driveAdmin(admin.ModelAdmin):
     inlines = [
         Type_drive_descriptionInline,
-    ]    
+    ] 
+    
+class Type_body_descriptionInline(admin.TabularInline):
+    model = Type_body_description
+    
+class Type_bodyAdmin(admin.ModelAdmin):
+    inlines = [
+        Type_body_descriptionInline,
+    ]      
    
 
 admin.site.register(MainSlider)
@@ -86,6 +96,8 @@ admin.site.register(Transmission, TransmissionAdmin)
 admin.site.register(Transmission_description)
 admin.site.register(Type_drive, Type_driveAdmin)
 admin.site.register(Type_drive_description)
+admin.site.register(Type_body, Type_bodyAdmin)
+admin.site.register(Type_body_description)
 
 
 

@@ -179,6 +179,28 @@ class Type_drive_description(models.Model):
     class Meta: 
         unique_together = ('type_drive', 'language',)         
         
+ 
+class Type_body(models.Model):
+    
+    type_body = models.CharField(default='', max_length=138)
+    
+    class Meta:
+        verbose_name_plural = "Тип кузова"
+        
+    def __str__(self):
+        querySet = Type_body_description.objects.filter(type_body = self.id, language = 4) 
+        a = querySet[0]  
+        return a.title         
+        
+class Type_body_description(models.Model):
+    
+    type_body = models.ForeignKey(Type_body, on_delete = models.CASCADE)
+    language = models.ForeignKey(Languages, on_delete = models.CASCADE)
+    title = models.CharField(default='', max_length=138)
+    class_name = models.CharField(default='', max_length=138)
+
+    class Meta: 
+        unique_together = ('type_body', 'language',)   
     
 class Automobiles(models.Model):
     #the model presents Automobiles
@@ -189,7 +211,8 @@ class Automobiles(models.Model):
     engine_type = models.ForeignKey(Engine_type, on_delete = models.CASCADE, null=True)
     engine_volume = models.ForeignKey(Engine_volume, on_delete = models.CASCADE, null=True)
     transmission = models.ForeignKey(Transmission, on_delete = models.CASCADE, null=True)
-    type_drive = models.ForeignKey(Type_drive, on_delete = models.CASCADE, null=True)    
+    type_drive = models.ForeignKey(Type_drive, on_delete = models.CASCADE, null=True) 
+    type_body = models.ForeignKey(Type_body, on_delete = models.CASCADE, null=True)
     
     def __str__(self):
         querySet_auto = Automobiles_description.objects.filter(Automobile = self.id, language = 4) 

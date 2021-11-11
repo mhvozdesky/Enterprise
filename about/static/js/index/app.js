@@ -2,7 +2,7 @@
 var filter_field_list = [];
 var filter_fields = document.querySelectorAll('.filter-list .filter-item');
 //var filter_fields = document.querySelectorAll('.volume-box-2_level');
-var url_filter = '?';
+var url_filter = '';
 var list_param = {
 	'.filter-item.price': 'p_1', 
 	'.filter-item.body_type': 'p_2', 
@@ -11,6 +11,15 @@ var list_param = {
 	'.filter-item.transmission': 'p_5',
 	'.filter-item.type_drive': 'p_6',
 };
+
+var value_param = {
+	'p_1': '',
+	'p_2': '',
+	'p_3': '',
+	'p_4': '',
+	'p_5': '',
+	'p_6': '',
+}
 
 for (var i = 0; i < filter_fields.length; i++) {
 	filter_field_list.push(filter_fields[i]);
@@ -53,6 +62,7 @@ function fill_filter(e){
 	var pressing = null;
 	var filter_item_class = null;
 	var filter_value = '';
+	var filter_value_id = '';
 
 	for (var i = 0; i < filter_field_list.length; i++) {
 		if (filter_field_list[i].contains(e.target)){
@@ -76,11 +86,38 @@ function fill_filter(e){
 	for (var i = 0; i < values.length; i++) {
 	 	if (values[i].contains(e.target)){
 	 		filter_value = values[i].querySelector('.text').textContent;
+
+	 		filter_value_id = values[i].classList[1].replace('item-', '');
+
 	 	}
 	 }
 
 	var fild = document.querySelector(filter_item_class + ' .volume-box-1-level .text');
 	fild.textContent = filter_value;
+
+	//заполнить словарь для get запроса
+	value_param[list_param[filter_item_class]] = filter_value_id;
+
+	create_get_request();
+
+}
+
+function create_get_request(){
+	url_filter = '?';
+	for (let key of Object.keys(value_param)){
+		if (url_filter === '?'){
+			sep = '';
+		}else{
+			sep = '&';
+		}
+
+		if (value_param[key] != ''){
+			url_filter = url_filter + sep + key + '=' + value_param[key];
+		}
+	}
+
+	var button_1 = document.querySelector('.a_button-1');
+	button_1.href = window.location.href + url_filter;
 }
 
 function filter_button_processing(e){
@@ -96,7 +133,7 @@ function filter_button_processing(e){
 }
 
 function button_filter(){
-	var button_1 = document.querySelector('.a_button-1');
+	//var button_1 = document.querySelector('.a_button-1');
 }
 
 function button_clean(){

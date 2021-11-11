@@ -3,7 +3,16 @@ import about.views as about_views
 from django.shortcuts import render
 from local_languages import lang_file
 from about.models import Engine_type, Engine_type_description, Engine_volume, Engine_volume_description, Transmission, Transmission_description, Type_drive, Type_drive_description
+from about.models import Type_body, Type_body_description
 
+dict_param = {
+    'p_1': 'price',
+    'p_2': 'Type_body',
+    'p_3': 'Engine_type',
+    'p_4': 'Engine_volume',
+    'p_5': 'Transmission',
+    'p_6': 'Type_drive',    
+}
 
 
 def index(request):
