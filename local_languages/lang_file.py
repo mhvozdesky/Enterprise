@@ -226,10 +226,52 @@ lang_dict = {
         'models_filter': {
             'filter_title': 'Выберите свой автомобиль',
             'price': 'Цена',
+            'body_type': 'Тип кузова',
             'engine_type': 'Тип двигателя',
             'engine_volume': "Объем двигателя",
-            'transmission': 'Трансмиссия        ',
+            'transmission': 'Трансмиссия',
             'type_drive': 'Тип привода',
+            'items_price': {
+                '500000': 'До 500 000',
+                '500000_1000000': '500 000 - 1 000 000',
+                '1000000_1500000': '1 000 000 - 1 500 000',
+                '1500000_2000000': '1 500 000 - 2 000 000',
+                '2000000': 'Больше 2 000 000',
+            },
+            'items_body_type': {
+                'sedan': 'Седан',
+                'crossover': 'Кросовер',
+                'pickup': 'Пикап',
+                'hatchback': 'Хэтчбек',
+                'suv': 'Внедорожник',
+            },
+            'engine_type_type': {
+                'hybrid': 'Гибрид',
+                'electro': 'Электро',
+                'diesel': 'Дизель',
+                'petrol': 'Бензин',
+            },
+            'engine_volume_type': {
+                '1_2': '1.2',
+                '1_5': '1.5',
+                '1_8': '1.8',
+                '2_0': '2.0',
+                '2_5': '2.5',
+                '3_0': '3.0',
+            },
+            'transmission_type': {
+                'automatic_transmission': 'АКПП',
+                'manual_transmission': 'МКПП',
+            },
+            'type_drive_type': {
+                'four_wheel_drive': 'Полный',
+                'rear_wheel_drive': 'Задний',
+                'front_wheel_drive': 'Передний',
+            },
+            'button_filter': {
+                'button_1': 'Фильтр',
+                'button_2': 'Очистить',
+            }
         },
         
     },
