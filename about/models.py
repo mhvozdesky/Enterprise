@@ -208,6 +208,7 @@ class Automobiles(models.Model):
     picture_770_340 = models.ImageField('picture 770x340', upload_to='images/automobiles')
     availability_hybrid = models.BooleanField(default=False)
     price_starts = models.CharField(max_length=20)
+    price = models.DecimalField(max_digits=10, decimal_places=0, default = 0)
     engine_type = models.ForeignKey(Engine_type, on_delete = models.CASCADE, null=True)
     engine_volume = models.ForeignKey(Engine_volume, on_delete = models.CASCADE, null=True)
     transmission = models.ForeignKey(Transmission, on_delete = models.CASCADE, null=True)

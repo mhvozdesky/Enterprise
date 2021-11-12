@@ -36,9 +36,28 @@ def get_lang_info(request):
         
     return [lang, path_other_lang, lang_id]    
 
-def get_automobiles_info(lang_id):
-    QuerySet_automobiles = Automobiles.objects.all()
+def get_dictionary_filter(dict_param, dict_price, request_GET):
+    dictionary_filter = {}
     
+    for k, v in request_GET.items():
+        if k == 'p_1':
+            item_price = dict_price[v]
+            for k_2, v_2 in item_price.items():
+                dictionary_filter[k_2] = v_2
+        else:
+            dictionary_filter[dict_param[k]] = v
+            
+    return dictionary_filter
+
+def get_automobiles_info(lang_id, *args):
+    dict_param, dict_price, request_GET = args
+    
+    if len(request_GET) == 0:
+        QuerySet_automobiles = Automobiles.objects.all()
+    else:
+        dictionary_filter = get_dictionary_filter(dict_param, dict_price, request_GET)
+        QuerySet_automobiles = Automobiles.objects.filter(**dictionary_filter)
+        
     list_automobiles = []
     for auto in QuerySet_automobiles:
         local_dict_automobiles = {}

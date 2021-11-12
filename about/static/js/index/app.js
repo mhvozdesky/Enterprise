@@ -117,7 +117,7 @@ function create_get_request(){
 	}
 
 	var button_1 = document.querySelector('.a_button-1');
-	button_1.href = window.location.href + url_filter;
+	button_1.href = window.location.href.replace(window.location.search, '') + url_filter;
 }
 
 function filter_button_processing(e){
@@ -141,6 +141,9 @@ function button_clean(){
 	for (var i = 0; i < filds_filter.length; i++) {
 		filds_filter[i].textContent = '---';
 	}
+
+	// var button_1 = document.querySelector('.a_button-1');
+	// button_1.href = window.location.href.replace(window.location.search, '');
 }
 
 function edit_menu_button(e){
@@ -349,6 +352,48 @@ function resizeListener(){
 	
 }
 
+function parse_get_parameters(){
+	var get_param = window.location.search.replace('?', '');
+
+	if (get_param === ''){
+		return;
+	}
+
+	url_filter = window.location.search;
+
+	var list_get_param = get_param.split('&');
+	dict_param = {};
+	for (var i = 0; i < list_get_param.length; i++) {
+		a = list_get_param[i].split('=');
+		dict_param[a[0]] = a[1];
+		value_param[a[0]] = a[1];
+
+	}
+
+
+	fill_field_filter(dict_param);
+}
+
+function find_key(dict, val){
+	for (let k of Object.keys(dict)){
+		if (dict[k] === val){
+			return k;
+		}
+	}
+}
+
+function fill_field_filter(dict_param){
+	for (let key of Object.keys(dict_param)){
+		var class_name = find_key(list_param, key);
+		var text_param = document.querySelector(class_name + ' .item-' + dict_param[key] + ' .text');
+		var field_level_1 = document.querySelector(class_name + ' .volume-box-1-level .text');
+		field_level_1.textContent = text_param.textContent;
+	}
+
+
+	//var elem_level_1 = 
+}
+
 document.addEventListener('click', ClickListener);
 
 window.onload = function() {
@@ -368,9 +413,14 @@ window.onload = function() {
   adapt_place_for_nav();
   bubu();
   adaptation_section_6();
-  
+  parse_get_parameters();
+  assign_button_clear();
   
 };
+
+function assign_button_clear(){
+	document.querySelector('.a_button-2').href = window.location.href.replace(window.location.search, '');
+}
 
 
 window.addEventListener('resize', resizeListener);
