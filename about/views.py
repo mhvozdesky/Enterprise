@@ -4,6 +4,23 @@ from about.models import MainSlider, Automobiles, News, Promotion, Languages, Ne
 from about.models import Engine_type, Engine_type_description, Engine_volume, Engine_volume_description, Transmission, Transmission_description, Type_drive, Type_drive_description
 from local_languages import lang_file
 
+dict_param = {
+    'p_1': 'price',
+    'p_2': 'type_body_id',
+    'p_3': 'engine_type_id',
+    'p_4': 'engine_volume_id',
+    'p_5': 'transmission_id',
+    'p_6': 'type_drive_id',    
+}
+
+dict_price = {
+    '1': {'price__lte': 500000},
+    '2': {'price__gte': 500000, 'price__lte': 1000000},
+    '3': {'price__gte': 1000000, 'price__lte': 1500000},
+    '4': {'price__gte': 1500000, 'price__lte': 2000000},
+    '5': {'price__gte': 2000000},
+}
+
 def get_info_slider(QuerySet_slides_new, lang_id):
     list_info_slider = []
     for slider in QuerySet_slides_new:
@@ -124,7 +141,7 @@ def index(request):
         title_promotion = description_promotions[0].title
         shot_description_promotion = description_promotions[0].short_description
         
-    list_automobiles = get_automobiles_info(lang_id)
+    list_automobiles = get_automobiles_info(lang_id, *(dict_param, dict_price, request.GET))
     
     context = {
         #'pref': pref,
