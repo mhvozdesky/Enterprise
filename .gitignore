@@ -1,1 +1,5 @@
-about/static/site_images
+# Text backup files
+*.bak
+
+#Database
+*.sqlite3
